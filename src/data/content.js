@@ -1,8 +1,8 @@
 export const NAV = [
+  { href: '#home', label: 'Home' },
   { href: '#how', label: 'How it works' },
   { href: '#steps', label: 'Your appointment' },
   { href: '#price', label: 'Price' },
-  { href: '#fit', label: 'Is it for me?' },
   { href: '#clinician', label: 'Your clinician' },
   { href: '#faq', label: 'Questions' },
 ];
@@ -82,20 +82,6 @@ export const INCLUSIONS = [
   'Written aftercare and a direct contact number',
 ];
 
-export const FIT_YES = [
-  'have knee osteoarthritis that’s confirmed or strongly suspected',
-  'still have pain, stiffness or swelling despite other treatments',
-  'had limited or short-lived benefit from painkillers, physiotherapy, steroid or hyaluronic acid injections',
-  'want to delay or avoid knee replacement surgery',
-  'prefer a clinic-based treatment with little downtime: self-employed, caring for someone, or simply not ready for an operation',
-];
-
-export const FIT_NO = [
-  'have a current infection in or near the knee',
-  'have a prosthetic knee joint or certain implants',
-  'have recently had knee surgery',
-];
-
 export const CLINICIAN = {
   name: 'Ram Rachaputi',
   letters: 'BPT, PG Dip, PG Cert, MCSP, MSOR',
@@ -167,22 +153,6 @@ export const CREDENTIALS = [
   { big: 'HCPC', small: 'registered clinician' },
   { big: '20+ yrs', small: 'NHS musculoskeletal experience' },
   { big: 'CE-marked', small: 'Arthrosamid® hydrogel' },
-];
-
-// Two-minute self-check in "Is it for me?". It guides people towards the right conversation; it is not a diagnosis.
-export const SELF_CHECK = [
-  {
-    q: 'Have you been told you have knee osteoarthritis, or do you think you might?',
-    yes: 'Yes', no: 'No / not sure',
-  },
-  {
-    q: 'Do you still get pain, stiffness or swelling despite painkillers, physio or other injections?',
-    yes: 'Yes', no: 'No',
-  },
-  {
-    q: 'Do you have a knee replacement, an infection near the knee, or recent knee surgery?',
-    yes: 'Yes', no: 'No',
-  },
 ];
 
 // Before/after patient videos. The section stays hidden while this list is empty.

@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="wrap">
         <div className="footer__brand">
-          <a className="brand" href="#top" aria-label="Arthrosamid® home">
+          <a className="brand" href="#home" aria-label="Arthrosamid® home">
             <Logo tone="white" />
           </a>
           <p className="footer__blurb">Private musculoskeletal ultrasound scans and ultrasound-guided injections across Warwickshire, the West Midlands, Buckinghamshire and Leicestershire.</p>

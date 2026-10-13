@@ -10,7 +10,6 @@ import Aftercare from './components/Aftercare.jsx';
 import Gallery from './components/Gallery.jsx';
 import CtaBand from './components/CtaBand.jsx';
 import Price from './components/Price.jsx';
-import Fit from './components/Fit.jsx';
 import Clinician from './components/Clinician.jsx';
 import Testimonials from './components/Testimonials.jsx';
 import BeforeAfter from './components/BeforeAfter.jsx';
@@ -34,7 +33,6 @@ export default function App() {
         <Aftercare />
         <Gallery />
         <Price />
-        <Fit />
         <Clinician />
         <CtaBand />
         <Testimonials />

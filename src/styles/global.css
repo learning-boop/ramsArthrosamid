@@ -269,18 +269,6 @@ html:not(.anim) .price__inc svg path{stroke-dashoffset:0}
 .price__note{padding:1.2rem 1.4rem;border:1px solid var(--on-navy-line);border-radius:var(--radius-sm);color:var(--on-navy-soft)}
 .price__note strong{display:block;color:var(--on-navy);font-weight:600;margin-bottom:.3rem}
 
-/* ---------------- Suitability ---------------- */
-.fit__cols{display:grid;gap:1.5rem;margin-top:2.4rem}
-@media (min-width:860px){.fit__cols{grid-template-columns:1.2fr .8fr}}
-.fit__col{padding:clamp(1.4rem,3vw,2.2rem);border-radius:var(--radius);background:var(--surface);border:1px solid var(--line)}
-.fit__col--no{background:var(--mist);border-color:transparent}
-.fit__col h3{margin-bottom:1rem}
-.fit__col ul{margin:0;padding:0;list-style:none;display:grid;gap:.7rem}
-.fit__col li{display:flex;gap:.7rem;align-items:flex-start;color:var(--ink-soft)}
-.fit__col li svg{width:22px;height:22px;flex:none;margin-top:.15rem}
-.fit__col--yes li svg{color:var(--gel)}
-.fit__col--no li svg{color:var(--ache)}
-.fit__foot{margin-top:1.2rem;font-size:.92rem;color:var(--ink-faint)}
 
 /* ---------------- Clinician ---------------- */
 .clin .wrap{display:grid;gap:clamp(2rem,5vw,4rem);align-items:start}
@@ -446,7 +434,7 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 .section--navy>.wrap{position:relative;z-index:1}
 .anim .section--navy::after{animation:glowdrift 24s ease-in-out infinite alternate}
 @keyframes glowdrift{to{transform:translate(-30%,30%) scale(1.2)}}
-.step__body,.voice,.clinics li,.fit__col{transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .4s}
+.step__body,.voice,.clinics li{transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .4s}
 .voice:hover,.clinics li:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 ::selection{background:var(--gold);color:var(--navy-ink)}
 
@@ -520,25 +508,6 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 .cta-band__actions .magnetic,.cta-band__actions .btn{width:100%}
 .cta-band__note{font-size:.85rem;color:rgba(255,255,255,.65);text-align:center}
 
-/* ---------------- Self-check ---------------- */
-.check{margin-top:2rem;padding:clamp(1.3rem,3vw,2.2rem);border-radius:var(--radius);background:var(--navy-deep);color:var(--on-navy);box-shadow:var(--shadow);overflow:hidden}
-.check__head{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem;margin-bottom:1.3rem}
-.check__label{font-family:var(--font-display);font-style:italic;color:var(--gold);font-size:1.1rem}
-.check__bar{height:4px;border-radius:4px;background:rgba(255,255,255,.14);overflow:hidden}
-.check__bar span{display:block;height:100%;background:linear-gradient(90deg,var(--gel),var(--gold));transition:width .5s var(--ease)}
-.check__count{font-size:.85rem;color:var(--on-navy-soft);font-variant-numeric:tabular-nums}
-.check__question,.check__title{font-family:var(--font-display);font-size:clamp(1.35rem,1.15rem + .8vw,1.8rem);line-height:1.2;margin-bottom:1.2rem;color:#fff;max-width:36ch}
-.check__body{color:var(--on-navy-soft);margin:-.4rem 0 1.3rem;max-width:58ch}
-.check__opts{display:flex;flex-wrap:wrap;gap:.7rem}
-.check__opt{min-height:56px;min-width:150px;padding:.8rem 1.4rem;border-radius:var(--radius-sm);border:1.5px solid rgba(255,255,255,.3);background:rgba(255,255,255,.06);color:#fff;font-weight:600;font-size:1.05rem;cursor:pointer;transition:background-color .25s,border-color .25s,transform .25s var(--ease)}
-.check__opt:hover{background:var(--gold);border-color:var(--gold);color:var(--navy-ink);transform:translateY(-2px)}
-.check .btn--ghost{border-color:rgba(255,255,255,.45);color:#fff}
-.check .btn--ghost:hover{background:#fff;color:var(--navy-ink)}
-.check__result{border-left:4px solid var(--steel);padding-left:1.1rem}
-.check__result--good{border-left-color:var(--gel)}
-.check__result--care{border-left-color:var(--ache)}
-.check__restart{margin-top:1rem;background:none;border:0;color:var(--on-navy-soft);text-decoration:underline;cursor:pointer;padding:.4rem 0}
-.check__fine{margin-top:1.3rem;font-size:.88rem;color:var(--on-navy-soft)}
 
 
 /* ---------------- Clinician + booking extras ---------------- */
@@ -590,12 +559,6 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
   .price__amount b{font-size:3.4rem}
   .price__card .form__actions .btn{width:100%}
 
-  /* Fit */
-  .fit__col{padding:1.2rem 1.1rem}
-  .check__head{grid-template-columns:1fr auto}
-  .check__bar{grid-column:1 / -1;grid-row:2}
-  .check__opt{flex:1 1 0;min-width:0}
-  .check__result .btn{width:100%}
 
   /* Clinician: compact header, collapsible list */
   .clin__card{max-width:none;padding:1.4rem 1.1rem}
@@ -644,7 +607,7 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
   .footer{font-size:1rem}
   .footer__legal{font-size:.9rem}
   .form__trust{font-size:.9rem}
-  .price__fine,.fit__foot,.feel__src{font-size:.92rem}
+  .price__fine,.feel__src{font-size:.92rem}
 }
 
 /* ---------------- Before / after (real patients) ---------------- */

@@ -48,7 +48,7 @@ export default function Hero() {
   });
 
   return (
-    <section className="hero" ref={sectionRef} aria-labelledby="heroTitle">
+    <section className="hero" id="home" ref={sectionRef} aria-labelledby="heroTitle">
       {/* Background film */}
       <motion.div className="hero__film" aria-hidden="true" style={reduce ? undefined : { y: filmY, scale: filmScale }}>
         <video

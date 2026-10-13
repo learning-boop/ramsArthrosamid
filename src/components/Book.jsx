@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Reveal from './Reveal.jsx';
 import { Pin } from './Icons.jsx';
 import OpeningHours, { OpenStatus } from './OpeningHours.jsx';
@@ -10,13 +10,6 @@ const EMPTY = { name: '', phone: '', email: '', clinic: CLINIC_OPTIONS[0], knee:
 export default function Book() {
   const [form, setForm] = useState(EMPTY);
   const [status, setStatus] = useState(null); // { kind: 'error' | 'ok' | 'sending', text, note }
-
-  // The self-check can hand its answers to the form.
-  useEffect(() => {
-    const onPrefill = (e) => setForm((f) => ({ ...f, message: e.detail?.message || f.message }));
-    window.addEventListener('prefill-booking', onPrefill);
-    return () => window.removeEventListener('prefill-booking', onPrefill);
-  }, []);
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.type === 'checkbox' ? e.target.checked : e.target.value }));
 

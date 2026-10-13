@@ -11,12 +11,13 @@ export default function Header() {
   const [active, setActive] = useState('');
 
   useEffect(() => {
-    const sections = NAV.map((n) => document.querySelector(n.href)).filter(Boolean);
+    const sections = NAV.filter((n) => n.href !== '#home').map((n) => document.querySelector(n.href)).filter(Boolean);
     let ticking = false;
     const update = () => {
       setStuck(window.scrollY > 60);
       const y = window.innerHeight * 0.4;
-      let current = '';
+      const hero = document.querySelector('.hero');
+      let current = hero && hero.getBoundingClientRect().bottom > y ? '#home' : '';
       sections.forEach((s) => {
         const r = s.getBoundingClientRect();
         if (r.top <= y && r.bottom > y) current = '#' + s.id;
@@ -49,7 +50,7 @@ export default function Header() {
 
       <header className={`header${stuck ? ' is-stuck' : ''}${open ? ' is-open' : ''}`} id="top">
         <div className="wrap">
-          <a className="brand" href="#top" aria-label="Arthrosamid® home">
+          <a className="brand" href="#home" aria-label="Arthrosamid® home">
             <Logo tone="auto" />
           </a>
 
