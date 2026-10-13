@@ -13,7 +13,9 @@ export default function Hero() {
   const reduce = useReducedMotion();
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
-  const [playing, setPlaying] = useState(!reduce);
+  const [playing, setPlaying] = useState(true);
+  // Set once the visitor pauses the film themselves, so nothing restarts it behind their back.
+  const userPaused = useRef(false);
 
   // Scroll-linked depth: the film sinks and slowly zooms while the copy lifts away and fades.
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end start'] });
@@ -25,20 +27,44 @@ export default function Hero() {
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return undefined;
-    if (reduce) { v.pause(); setPlaying(false); return undefined; }
-    // React doesn't reflect `muted` as an attribute, and autoplay policies check it, so set it directly.
+    // React doesn't reflect `muted` as an attribute, and mobile autoplay policies check it, so set both.
     v.muted = true;
-    // An early play() can be aborted while the <source> is still being chosen, so retry once it can play.
-    const start = () => v.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+    v.defaultMuted = true;
+    v.setAttribute('muted', '');
+    v.setAttribute('playsinline', '');
+
+    const start = () => {
+      if (userPaused.current || !v.paused) return;
+      v.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+    };
+    // Mobile browsers can refuse autoplay (iOS Low Power Mode, Android data saver), so also retry
+    // when the video is ready, when the tab comes back, and on the visitor's first touch or scroll.
+    const gestures = ['touchstart', 'pointerdown', 'scroll', 'keydown'];
+    const onGesture = () => { start(); gestures.forEach((e) => window.removeEventListener(e, onGesture)); };
+    const onVisible = () => { if (document.visibilityState === 'visible') start(); };
+
     start();
-    v.addEventListener('canplay', start, { once: true });
-    return () => v.removeEventListener('canplay', start);
-  }, [reduce]);
+    ['loadeddata', 'canplay'].forEach((e) => v.addEventListener(e, start));
+    gestures.forEach((e) => window.addEventListener(e, onGesture, { passive: true }));
+    document.addEventListener('visibilitychange', onVisible);
+    return () => {
+      ['loadeddata', 'canplay'].forEach((e) => v.removeEventListener(e, start));
+      gestures.forEach((e) => window.removeEventListener(e, onGesture));
+      document.removeEventListener('visibilitychange', onVisible);
+    };
+  }, []);
 
   const toggleVideo = () => {
     const v = videoRef.current;
     if (!v) return;
-    if (v.paused) { v.play(); setPlaying(true); } else { v.pause(); setPlaying(false); }
+    if (v.paused) {
+      userPaused.current = false;
+      v.play().then(() => setPlaying(true)).catch(() => setPlaying(false));
+    } else {
+      userPaused.current = true;
+      v.pause();
+      setPlaying(false);
+    }
   };
 
   const fade = (delay) => (reduce ? {} : {
@@ -58,8 +84,8 @@ export default function Hero() {
           muted
           loop
           playsInline
-          autoPlay={!reduce}
-          preload={reduce ? 'none' : 'auto'}
+          autoPlay
+          preload="auto"
         >
           <source src={HERO_VIDEO.mobileSrc} type="video/mp4" media="(max-width: 760px)" />
           <source src={HERO_VIDEO.src} type="video/mp4" />
