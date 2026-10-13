@@ -1,5 +1,6 @@
 import { CLINIC } from '../config.js';
 import Logo from './Logo.jsx';
+import OpeningHours from './OpeningHours.jsx';
 
 export default function Footer() {
   return (
@@ -19,6 +20,8 @@ export default function Footer() {
             <li><a href={`mailto:${CLINIC.email}`}>{CLINIC.email}</a></li>
             <li>{CLINIC.postalAddress}</li>
           </ul>
+          <h4 className="footer__hours-title">Opening hours</h4>
+          <OpeningHours className="hours--footer" />
         </div>
         <div className="footer__legal">
           <p>Arthrosamid® is a registered trademark of Contura. This page is for information and does not replace a consultation. Arthrosamid® is not suitable for everyone; suitability is confirmed by a clinician after assessment and, where appropriate, ultrasound scan. Individual results vary.</p>

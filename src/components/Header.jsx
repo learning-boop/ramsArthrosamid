@@ -3,6 +3,7 @@ import { NAV } from '../data/content.js';
 import { CLINIC } from '../config.js';
 import { Menu, CloseIcon } from './Icons.jsx';
 import Logo from './Logo.jsx';
+import { OpenStatus } from './OpeningHours.jsx';
 
 export default function Header() {
   const [stuck, setStuck] = useState(false);
@@ -35,6 +36,7 @@ export default function Header() {
       <div className="topbar">
         <div className="wrap">
           <span>
+            <OpenStatus className="topbar__status" />
             Call <a href={CLINIC.phoneHref}>{CLINIC.phoneDisplay}</a>
             <span className="topbar__email">
               <span className="topbar__sep" aria-hidden="true"> · </span>

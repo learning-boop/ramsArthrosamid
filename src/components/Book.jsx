@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Reveal from './Reveal.jsx';
 import { Pin } from './Icons.jsx';
+import OpeningHours, { OpenStatus } from './OpeningHours.jsx';
 import { CLINICS, CLINIC_OPTIONS } from '../data/content.js';
 import { CLINIC, FORM_ENDPOINT } from '../config.js';
 
@@ -63,6 +64,14 @@ export default function Book() {
           <Reveal as="p" className="lead measure">Early and emergency appointments are available. If you can’t get to a clinic, home visits can be arranged.</Reveal>
         </div>
         <div className="book__details">
+          <Reveal className="hours-card">
+            <div className="hours-card__head">
+              <h3 className="h3">Opening hours</h3>
+              <OpenStatus />
+            </div>
+            <OpeningHours />
+            <p className="hours-card__note">Call <a href={CLINIC.phoneHref}>{CLINIC.phoneDisplay}</a> to book at any of our clinics.</p>
+          </Reveal>
           <Reveal as="ul" className="clinics">
             {CLINICS.map((c) => (
               <li key={c.name}><Pin /><div><strong>{c.name}</strong><span>{c.area}</span></div></li>

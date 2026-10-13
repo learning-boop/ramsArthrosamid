@@ -30,3 +30,10 @@ export const HERO_VIDEO = {
   mobileSrc: './media/hero-mobile.mp4',
   poster: './media/hero-poster.jpg',
 };
+
+// Opening hours (UK time). `days` uses JavaScript day numbers: 0 = Sunday … 6 = Saturday.
+export const OPENING_HOURS = [
+  { label: 'Monday to Friday', days: [1, 2, 3, 4, 5], open: '09:00', close: '19:00', display: '9am – 7pm' },
+  { label: 'Saturday', days: [6], open: '10:00', close: '17:00', display: '10am – 5pm' },
+  { label: 'Sunday', days: [0], display: 'Closed' },
+];
