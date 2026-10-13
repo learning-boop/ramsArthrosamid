@@ -19,6 +19,7 @@ export default function Footer() {
             <li><a href={CLINIC.phoneHref}>{CLINIC.phoneDisplay}</a></li>
             <li><a href={`mailto:${CLINIC.email}`}>{CLINIC.email}</a></li>
             <li>{CLINIC.postalAddress}</li>
+            <li><a href={`${CLINIC.website}/contact/`}>Contact us</a></li>
           </ul>
           <h4 className="footer__hours-title">Opening hours</h4>
           <OpeningHours className="hours--footer" />

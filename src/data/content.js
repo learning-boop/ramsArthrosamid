@@ -5,6 +5,7 @@ export const NAV = [
   { href: '#price', label: 'Price' },
   { href: '#clinician', label: 'Your clinician' },
   { href: '#faq', label: 'Questions' },
+  { href: 'https://jointcareclinics.co.uk/contact/', label: 'Contact' },
 ];
 
 // "You know the feeling": the everyday moments knee osteoarthritis takes over.

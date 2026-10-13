@@ -11,7 +11,7 @@ export default function Header() {
   const [active, setActive] = useState('');
 
   useEffect(() => {
-    const sections = NAV.filter((n) => n.href !== '#home').map((n) => document.querySelector(n.href)).filter(Boolean);
+    const sections = NAV.filter((n) => n.href.startsWith('#') && n.href !== '#home').map((n) => document.querySelector(n.href)).filter(Boolean);
     let ticking = false;
     const update = () => {
       setStuck(window.scrollY > 60);
