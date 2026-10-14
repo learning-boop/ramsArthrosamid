@@ -129,7 +129,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div className="hero__cta" {...fade(1.35)}>
-            <Magnetic><a className="btn btn--primary btn--pulse btn--shine" href="#book">Book a consultation</a></Magnetic>
+            <Magnetic><a className="btn btn--primary btn--pulse btn--shine" href={CLINIC.bookingUrl}>Book a consultation</a></Magnetic>
             <Magnetic><a className="btn btn--glass hero__call" href={CLINIC.phoneHref} aria-label={`Call ${CLINIC.phoneDisplay}`}><Phone /><span className="only-wide">Call {CLINIC.phoneDisplay}</span></a></Magnetic>
           </motion.div>
 
@@ -147,7 +147,7 @@ export default function Hero() {
           : <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5v14l12-7Z" /></svg>}
       </button>
 
-      <motion.a className="scroll-cue" href="#feel" aria-label="Scroll to read more" {...fade(2)}>
+      <motion.a className="scroll-cue" href="#life" aria-label="Scroll to read more" {...fade(2)}>
         <span>Scroll</span><ChevronDown />
       </motion.a>
     </section>

@@ -4,7 +4,7 @@ export const NAV = [
   { href: '#steps', label: 'Your appointment' },
   { href: '#clinician', label: 'Your clinician' },
   { href: '#faq', label: 'Questions' },
-  { href: 'https://jointcareclinics.co.uk/contact/', label: 'Contact' },
+  { href: '#clinics', label: 'Clinics' },
 ];
 
 // "Your whole life": how knee osteoarthritis spreads from the joint to the day to the people around you,
@@ -78,15 +78,21 @@ export const STATS = [
 export const STEPS = [
   {
     title: 'Consultation and scan',
+    img: './media/knee-exam.jpg',
+    alt: 'A clinician examining a patient’s knee on a treatment couch',
     body: 'We talk through your symptoms and goals, examine the knee and scan it live with ultrasound. If Arthrosamid® isn’t right for you, we’ll say so.',
   },
   {
     title: 'The injection',
+    img: './media/ultrasound.jpg',
+    alt: 'A clinician in blue gloves adjusting an ultrasound machine',
     body: 'The knee is numbed, any excess fluid drawn off, and the gel placed under ultrasound guidance in a few seconds. No stitches, just a plaster.',
     note: 'Needle-phobic? Tell us. It’s something we handle every week.',
   },
   {
     title: 'Home the same day',
+    img: './media/beach-couple.jpg',
+    alt: 'An older couple walking together along a beach',
     body: 'A short rest, then home with written aftercare and a direct number. Please arrange a lift; you can’t drive for a few hours.',
   },
 ];
@@ -143,15 +149,13 @@ export const FAQS = [
   { q: 'Can I drive home afterwards?', a: 'No. Please bring someone or arrange transport. Most motor insurance won’t cover you for a few hours after a local anaesthetic.' },
 ];
 
-// Official addresses from jointcareclinics.co.uk/contact. All clinics book through 0333 444 2013.
+// Joint Care Clinics locations where Ram sees patients (from jointcareclinics.co.uk/contact).
 export const CLINICS = [
-  { name: 'Rugby', area: '78 Clifton Road, Rugby, Warwickshire CV21 3QT' },
-  { name: 'Birmingham & Solihull', area: '265B Alcester Rd S, King’s Heath, Birmingham B14 6DT' },
-  { name: 'Leicester', area: 'No 1, Holmfield Court, Holmfield Rd, Leicester LE2 1SD' },
-  { name: 'Milton Keynes', area: 'ISIS Chiropractic, ISIS House, Tilers Rd, Kiln Farm, Milton Keynes MK11 3EA' },
+  { name: 'Birmingham & Solihull', address: '265B Alcester Road South, King’s Heath, Birmingham B14 6DT' },
+  { name: 'Leicester', address: 'No 1, Holmfield Court, Holmfield Road, Leicester LE2 1SD' },
+  { name: 'Rugby', address: '78 Clifton Road, Rugby, Warwickshire CV21 3QT' },
+  { name: 'Milton Keynes', address: 'ISIS Chiropractic, ISIS House, Tilers Road, Kiln Farm, Milton Keynes MK11 3EA' },
 ];
-
-export const CLINIC_OPTIONS = ['Rugby', 'Birmingham & Solihull', 'Leicester', 'Milton Keynes', 'Home visit', 'Not sure yet'];
 
 // Trust band under the hero. Every item is a fact stated elsewhere on the page.
 export const CREDENTIALS = [

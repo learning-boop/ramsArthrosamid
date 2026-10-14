@@ -7,6 +7,8 @@ export const CLINIC = {
   email: 'info@jointcareclinics.co.uk',
   postalAddress: '78 Clifton Road, Rugby, Warwickshire, CV21 3QT',
   website: 'https://jointcareclinics.co.uk',
+  // Every "Book a consultation" button goes here.
+  bookingUrl: 'https://jointcareclinics.co.uk/contact/',
 };
 
 export const PRICE = {
@@ -15,10 +17,6 @@ export const PRICE = {
   cortisone: '£300',
   hyaluronicFrom: '£350',
 };
-
-// Where the call-back form posts (JSON). Leave empty until the booking/CRM endpoint is ready:
-// while it's empty, the form shows a clearly labelled preview message and sends nothing.
-export const FORM_ENDPOINT = '';
 
 // Hero background film. Swap in your own footage by replacing public/media/hero.mp4 (and the poster frame).
 // Stock clip: "Grandfather and grandson walking in forest" by Pexels contributor, Pexels licence (pexels.com/license):

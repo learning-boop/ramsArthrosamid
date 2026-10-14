@@ -10,7 +10,7 @@ import Clinician from './components/Clinician.jsx';
 import Testimonials from './components/Testimonials.jsx';
 import BeforeAfter from './components/BeforeAfter.jsx';
 import Faq from './components/Faq.jsx';
-import Book from './components/Book.jsx';
+import Clinics from './components/Clinics.jsx';
 import Footer from './components/Footer.jsx';
 import MobileBar from './components/MobileBar.jsx';
 
@@ -30,7 +30,7 @@ export default function App() {
         <Testimonials />
         <BeforeAfter />
         <Faq />
-        <Book />
+        <Clinics />
       </main>
       <Footer />
       <MobileBar />

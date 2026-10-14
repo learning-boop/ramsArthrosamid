@@ -58,7 +58,7 @@ export default function Header() {
             {NAV.map((n) => (
               <a key={n.href} href={n.href} className={active === n.href ? 'is-active' : undefined}>{n.label}</a>
             ))}
-            <a className="btn btn--primary" href="#book">Book a consultation</a>
+            <a className="btn btn--primary" href={CLINIC.bookingUrl}>Book a consultation</a>
           </nav>
 
           <button
@@ -78,7 +78,7 @@ export default function Header() {
             {NAV.map((n) => (
               <a key={n.href} href={n.href} onClick={() => setOpen(false)}>{n.label}</a>
             ))}
-            <a href="#book" onClick={() => setOpen(false)}>Book a consultation</a>
+            <a href={CLINIC.bookingUrl} onClick={() => setOpen(false)}>Book a consultation</a>
           </div>
         </div>
       </header>
