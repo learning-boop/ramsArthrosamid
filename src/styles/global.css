@@ -156,7 +156,6 @@ button{font:inherit;color:inherit}
 .hero__sub{max-width:44ch;margin-bottom:1.8rem}
 .hero__cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-bottom:2rem}
 
-
 .hero__toggle{position:absolute;right:clamp(16px,4vw,40px);bottom:24px;z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(14,26,40,.35);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);display:grid;place-items:center;cursor:pointer;color:#fff;transition:background-color .25s,transform .25s var(--ease)}
 .hero__toggle:hover{background:rgba(255,255,255,.18);transform:scale(1.06)}
 .hero__toggle svg{width:16px;height:16px;fill:currentColor}
@@ -177,18 +176,6 @@ button{font:inherit;color:inherit}
 .magnetic{display:inline-block}
 
   
-/* ---------------- "You know the feeling" ---------------- */
-.feel .wrap{display:grid;gap:clamp(2rem,5vw,4rem);align-items:start}
-@media (min-width:900px){.feel .wrap{grid-template-columns:1fr 1fr}}
-.feel__turn{font-family:var(--font-display);font-size:clamp(1.8rem,1.4rem + 1.6vw,2.7rem);line-height:1.12;color:var(--navy);margin-bottom:1rem}
-.feel__aside{position:relative;padding:clamp(1.6rem,3vw,2.4rem);background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
-.feel__aside::before{content:"";position:absolute;inset:auto -40% -60% auto;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(226,107,82,.22),transparent 70%)}
-.anim .feel__aside::before{animation:ache-pulse 4s ease-in-out infinite}
-@keyframes ache-pulse{0%,100%{transform:scale(.9);opacity:.6}50%{transform:scale(1.15);opacity:1}}
-.feel__aside p{position:relative}
-.feel__stat{font-family:var(--font-display);font-size:clamp(2.6rem,2rem + 2vw,4rem);line-height:1;color:var(--navy);margin-bottom:.4rem}
-.feel__src{font-size:.85rem;color:var(--ink-faint);margin-top:1rem}
-
 /* ---------------- Mechanism ---------------- */
 .how__grid{display:grid;gap:clamp(1.5rem,3vw,2.5rem);margin-top:2.5rem}
 @media (min-width:860px){.how__grid{grid-template-columns:repeat(3,1fr)}}
@@ -210,7 +197,6 @@ button{font:inherit;color:inherit}
 .how__stage h3{margin-bottom:.6rem}
 .how__stage p{color:var(--ink-soft)}
 
-
 /* ---------------- Steps ---------------- */
 .steps__intro{display:grid;gap:1rem;margin-bottom:3rem}
 @media (min-width:900px){.steps__intro{grid-template-columns:1fr 1fr;align-items:end}}
@@ -225,49 +211,6 @@ button{font:inherit;color:inherit}
 .step__body h3{margin-bottom:.5rem}
 .step__body p{color:var(--ink-soft)}
 .step__time{display:inline-block;margin-top:.8rem;font-size:.85rem;color:var(--ink-faint)}
-
-/* ---------------- Aftercare timeline ---------------- */
-.tl{position:relative;margin-top:2.8rem}
-.tl__track{position:absolute;left:0;right:0;top:9px;height:4px;background:var(--line);border-radius:4px;overflow:hidden;display:none}
-.tl__fill{height:100%;width:0;background:linear-gradient(90deg,var(--ache),var(--gel) 45%,var(--gold));transition:width 2.6s var(--ease)}
-.tl.in .tl__fill{width:100%}
-.tl__items{list-style:none;margin:0;padding:0;display:grid;gap:1.6rem}
-.tl__item{position:relative;padding-left:2rem}
-.tl__item::before{content:"";position:absolute;left:0;top:.35rem;width:22px;height:22px;border-radius:50%;background:var(--paper);border:4px solid var(--line);transition:border-color .5s,transform .5s var(--ease);transition-delay:var(--d,0s)}
-.tl.in .tl__item::before{border-color:var(--gold);transform:scale(1.1)}
-.tl__item strong{display:block;font-family:var(--font-display);font-size:1.4rem;line-height:1.1;color:var(--navy);margin-bottom:.4rem}
-.tl__item p{color:var(--ink-soft);font-size:.98rem}
-.tl__item--last strong{color:var(--gold-text)}
-@media (min-width:900px){
-  .tl{padding-top:2.4rem}
-  .tl__track{display:block}
-  .tl__items{grid-template-columns:repeat(5,1fr);gap:1.2rem}
-  .tl__item{padding-left:0;padding-right:1rem}
-  .tl__item::before{top:-2.4rem;left:0}
-}
-
-
-/* ---------------- Price ---------------- */
-.price .wrap{display:grid;gap:clamp(2rem,5vw,4rem);align-items:center}
-@media (min-width:960px){.price .wrap{grid-template-columns:1fr 1.1fr}}
-.price__card{position:relative;background:var(--surface);color:var(--ink);border-radius:var(--radius);padding:clamp(1.6rem,3.5vw,2.8rem);box-shadow:var(--shadow);border-top:6px solid var(--gold)}
-.section--navy .price__card .kicker{color:var(--gold-text)}
-.section--navy .price__card .btn--ghost{border-color:var(--navy);color:var(--navy)}
-.section--navy .price__card .btn--ghost:hover{background:var(--navy);color:var(--on-navy)}
-.price__amount{display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap;margin:.3rem 0 .2rem}
-.price__amount b{font-family:var(--font-display);font-weight:500;font-size:clamp(3.2rem,2.6rem + 3vw,5.2rem);line-height:1;letter-spacing:-.02em;color:var(--navy);font-variant-numeric:tabular-nums}
-.price__amount span{color:var(--ink-soft);font-size:1.05rem}
-.price__lead{color:var(--ink-soft)}
-.price__inc{list-style:none;margin:1.6rem 0 0;padding:1.4rem 0 0;border-top:1px solid var(--line);display:grid;gap:.75rem}
-.price__inc li{display:flex;gap:.8rem;align-items:flex-start}
-.price__inc svg{width:24px;height:24px;flex:none;color:var(--gold-text);margin-top:.1rem}
-.price__inc svg path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .6s var(--ease);transition-delay:var(--d,0s)}
-.price__card.in .price__inc svg path{stroke-dashoffset:0}
-html:not(.anim) .price__inc svg path{stroke-dashoffset:0}
-.price__fine{margin-top:1.4rem;font-size:.9rem;color:var(--ink-faint)}
-.price__notes{display:grid;gap:1.2rem;margin-top:1.8rem}
-.price__note{padding:1.2rem 1.4rem;border:1px solid var(--on-navy-line);border-radius:var(--radius-sm);color:var(--on-navy-soft)}
-.price__note strong{display:block;color:var(--on-navy);font-weight:600;margin-bottom:.3rem}
 
 
 /* ---------------- Clinician ---------------- */
@@ -339,11 +282,6 @@ html:not(.anim) .price__inc svg path{stroke-dashoffset:0}
 .book__intro{grid-area:intro}.book__details{grid-area:details}.book__form{grid-area:form}
 .book__intro .lead{margin-bottom:0}
 @media (min-width:960px){.book .wrap{grid-template-columns:1fr 1fr;grid-template-areas:"intro form" "details form"}.book__details{margin-top:-1rem}}
-.clinics{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:.8rem}
-.clinics li{display:grid;grid-template-columns:auto 1fr;gap:1rem;align-items:start;padding:1rem 1.1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm)}
-.clinics svg{width:24px;height:24px;color:var(--navy);margin-top:.1rem}
-.clinics strong{display:block;font-weight:600}
-.clinics span{color:var(--ink-soft);font-size:.95rem}
 .form{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.4rem,3vw,2.2rem);box-shadow:var(--shadow)}
 .form h3{margin-bottom:.4rem}
 .form__hint{color:var(--ink-soft);font-size:.95rem;margin-bottom:1.4rem}
@@ -398,11 +336,6 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 .pimg figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1.2rem 1rem;color:#fff;font-size:.95rem;background:linear-gradient(transparent,rgba(14,26,40,.78));display:flex;gap:.7rem;align-items:baseline}
 .pimg figcaption span{font-family:var(--font-display);font-style:italic;color:var(--gold)}
 
-/* Feel */
-.feel__side{display:grid}
-.feel__photo{margin-inline:1.2rem;margin-bottom:-3.5rem}
-.feel__side .feel__aside{z-index:1}
-
 /* How: intro + knee */
 .how__intro{display:grid;gap:2rem;align-items:center}
 @media (min-width:900px){.how__intro{grid-template-columns:1fr 1fr}}
@@ -412,21 +345,6 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 .how__stage:hover{transform:translateY(-6px)}
 
 /* Steps: photo duo */
-.steps__media{position:relative;display:grid;grid-template-columns:repeat(12,1fr);align-items:end;margin-bottom:clamp(4rem,7vw,6rem)}
-.steps__photo--a{grid-column:1 / span 9;grid-row:1}
-.steps__photo--b{grid-column:8 / span 5;grid-row:1;margin-bottom:-3rem;z-index:1}
-.steps__photo--b .pimg__clip{border:6px solid var(--paper)}
-.steps__chip{position:absolute;left:1.2rem;top:1.2rem;z-index:2;padding:.8rem 1rem;border-radius:14px;background:rgba(255,255,255,.95);font-weight:600;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:var(--shadow);font-size:.85rem;color:var(--ink-soft);max-width:200px;line-height:1.35}
-.steps__chip b{display:block;font-family:var(--font-display);font-weight:500;font-size:1.8rem;color:var(--navy);line-height:1}
-@media (max-width:640px){.steps__photo--a{grid-column:1 / span 10}.steps__photo--b{grid-column:6 / span 7}}
-
-/* Gallery */
-.gallery{position:relative;overflow:hidden;padding-top:clamp(40px,6vw,80px)}
-.gallery__marquee{white-space:nowrap;font-family:var(--font-display);font-style:italic;font-weight:400;font-size:clamp(3.5rem,10vw,9rem);line-height:1.1;color:transparent;-webkit-text-stroke:1.5px var(--steel);opacity:.7;margin-bottom:clamp(1rem,3vw,2rem);pointer-events:none}
-.gallery__marquee span{display:inline-block}
-.gallery__grid{display:grid;gap:1.4rem;margin-top:2.6rem;align-items:start}
-@media (min-width:760px){.gallery__grid{grid-template-columns:1fr 1.15fr 1fr;padding-block:5rem}}
-@media (max-width:759px){.gallery__col{transform:none !important}}
 
 /* Polishing touches */
 .section--navy{position:relative;overflow:hidden}
@@ -434,8 +352,8 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 .section--navy>.wrap{position:relative;z-index:1}
 .anim .section--navy::after{animation:glowdrift 24s ease-in-out infinite alternate}
 @keyframes glowdrift{to{transform:translate(-30%,30%) scale(1.2)}}
-.step__body,.voice,.clinics li{transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .4s}
-.voice:hover,.clinics li:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.step__body,.voice{transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .4s}
+.voice:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
 ::selection{background:var(--gold);color:var(--navy-ink)}
 
 /* ---------------- Hero: phones and tablets ---------------- */
@@ -496,19 +414,6 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 .trust__creds span{display:block;margin-top:.25rem;font-size:.85rem;font-weight:600;line-height:1.3;color:var(--ink-soft)}
 
 /* ---------------- Mid-page CTA ---------------- */
-.cta-band{padding-block:clamp(24px,4vw,56px)}
-.cta-band__card{position:relative;overflow:hidden;isolation:isolate;display:grid;gap:1.6rem;align-items:center;padding:clamp(1.6rem,4vw,3.2rem);border-radius:calc(var(--radius) + 8px);color:#fff;
-  background:radial-gradient(70% 120% at 100% 0%,rgba(217,164,65,.35),transparent 60%),linear-gradient(135deg,var(--navy) 0%,var(--navy-ink) 100%);box-shadow:0 40px 80px -40px rgba(14,26,40,.7)}
-.cta-band__card::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--cta-img) center/cover;opacity:.16;mix-blend-mode:luminosity}
-@media (min-width:900px){.cta-band__card{grid-template-columns:1.3fr 1fr;gap:3rem}}
-.cta-band .kicker{color:var(--gold)}
-.cta-band .h2{color:#fff;margin-bottom:.7rem}
-.cta-band .lead{color:rgba(255,255,255,.8);max-width:52ch}
-.cta-band__actions{display:grid;gap:.7rem}
-.cta-band__actions .magnetic,.cta-band__actions .btn{width:100%}
-.cta-band__note{font-size:.85rem;color:rgba(255,255,255,.65);text-align:center}
-
-
 
 /* ---------------- Clinician + booking extras ---------------- */
 .clin__more{display:none;margin-top:.8rem;padding:.5rem 0;background:none;border:0;color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
@@ -523,10 +428,6 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
   .h2{font-size:clamp(1.85rem,7.6vw,2.3rem)}
   .lead{font-size:1.05rem}
 
-  /* Feel */
-    .feel__turn{font-size:1.65rem}
-  .feel__photo{margin-inline:.6rem}
-
   /* How: swipeable stage cards */
   .how__grid{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1 * clamp(16px,4vw,40px));padding:.4rem clamp(16px,4vw,40px) 1rem;scrollbar-width:none}
   .how__grid::-webkit-scrollbar{display:none}
@@ -536,28 +437,12 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
   .stage-icon{width:48px;height:48px}
   .how__num{font-size:2rem}
 
-  /* Stats: 2 x 2 */
-
   /* Steps */
   .step{grid-template-columns:44px 1fr;gap:.8rem}
   .step__marker{width:44px;height:44px;font-size:1.2rem}
   .steps__line{left:21px;top:22px;bottom:22px}
   .step__body{padding:1rem 1.05rem}
   .step__body p{font-size:.95rem}
-  .steps__chip{left:.6rem;top:.6rem;padding:.55rem .75rem;max-width:150px;font-size:.75rem}
-  .steps__chip b{font-size:1.4rem}
-
-  /* Gallery: swipeable */
-  .gallery__marquee{font-size:3.2rem}
-  .gallery__grid{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1 * clamp(16px,4vw,40px));padding:.4rem clamp(16px,4vw,40px) 1rem;scrollbar-width:none}
-  .gallery__grid::-webkit-scrollbar{display:none}
-  .gallery__col{flex:0 0 76%;scroll-snap-align:center}
-  .gallery__col .pimg{aspect-ratio:4/5 !important}
-
-
-  /* Price */
-  .price__amount b{font-size:3.4rem}
-  .price__card .form__actions .btn{width:100%}
 
 
   /* Clinician: compact header, collapsible list */
@@ -574,11 +459,8 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
   .clin__regs span{font-size:.8rem}
 
   /* Testimonials */
-  .gallery__grid{padding-bottom:.4rem}
-  .gallery{padding-bottom:24px}
 
   /* Booking: the form comes first */
-  .clinics li{padding:.85rem .9rem}
   .form .form__actions .btn{width:100%}
   .form__alt{width:100%;text-align:center}
 
@@ -587,7 +469,6 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
   .mobilebar .btn{padding-inline:1.1rem;white-space:nowrap}
 
   /* CTA band */
-  .cta-band .wrap{padding-inline:12px}
 }
 
 /* ---------------- Phones: readable type ---------------- */
@@ -601,13 +482,11 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
   .hero__headline{font-weight:500}
   .hero__sub{font-size:1.08rem;max-width:30ch}
   .hero__stats dd{font-size:.78rem}
-  .steps__chip{font-size:.8rem}
   .trust__creds span{font-size:.82rem}
   .clin__regs span{font-size:.85rem}
   .footer{font-size:1rem}
   .footer__legal{font-size:.9rem}
   .form__trust{font-size:.9rem}
-  .price__fine,.feel__src{font-size:.92rem}
 }
 
 /* ---------------- Before / after (real patients) ---------------- */
@@ -637,17 +516,6 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 .ba__meta blockquote{grid-column:1/-1;margin:.6rem 0 0;font-family:var(--font-display);font-style:italic;font-weight:500;font-size:1.15rem;line-height:1.4;color:var(--ink)}
 .ba__fine{margin-top:1.2rem;font-size:.9rem;color:var(--ink-faint);max-width:80ch}
 @media (max-width:759px){.ba__meta{grid-template-columns:1fr}.ba__when{justify-self:start}}
-
-/* ---------------- Pain moments ---------------- */
-.feel__intro{margin:-.2rem 0 1.4rem;max-width:46ch}
-.moments{list-style:none;margin:0 0 2.2rem;padding:0;display:grid;gap:.8rem}
-@media (min-width:560px){.moments{grid-template-columns:1fr 1fr}}
-.moment{display:flex;gap:.9rem;align-items:flex-start;padding:1.05rem 1.1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s}
-.moment:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#e6cf9a}
-.moment__icon{flex:none;display:grid;place-items:center;width:52px;height:52px;border-radius:14px;color:var(--navy);background:linear-gradient(150deg,#fff,var(--mist));box-shadow:inset 0 0 0 1px var(--line)}
-.moment__icon svg{width:34px;height:34px}
-.moment__title{font-family:var(--font-display);font-weight:600;font-size:1.22rem;line-height:1.2;color:var(--ink);margin-bottom:.25rem}
-.moment p{font-size:.95rem;line-height:1.45;color:var(--ink-soft)}
 
 /* ---------------- Knee anatomy (How it works) ---------------- */
 .anat{margin:0;padding:clamp(1rem,2.5vw,1.6rem);border-radius:calc(var(--radius) + 6px);background:linear-gradient(170deg,#fff 0%,var(--mist) 100%);border:1px solid var(--line);box-shadow:var(--shadow)}
@@ -698,9 +566,6 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
   .anat__tab{font-size:.78rem;padding:.4rem .3rem}
   .anat__labels{font-size:20px}
   .anat__labels .sub{font-size:16px}
-  .moment{padding:.9rem}
-  .moment__icon{width:46px;height:46px}
-  .moment__icon svg{width:30px;height:30px}
 }
 
 /* ---------------- Opening hours ---------------- */
@@ -734,3 +599,66 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
 }
+
+/* ---------------- Your whole life (ICF model) ---------------- */
+.life__intro{display:grid;gap:1rem 3rem;align-items:end}
+@media (min-width:900px){.life__intro{grid-template-columns:1fr 1fr}}
+.life__toggle{display:inline-grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:2rem;padding:4px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.life__toggle button{min-height:44px;padding:.5rem 1.1rem;border:0;border-radius:999px;background:transparent;font-weight:700;font-size:.92rem;color:var(--ink-soft);cursor:pointer;transition:background-color .4s,color .4s,box-shadow .4s}
+.life__toggle button:hover{color:var(--navy)}
+.life__toggle button.is-on{background:#b44f3a;color:#fff;box-shadow:0 6px 14px -8px rgba(30,52,73,.8)}
+.life.is-relief .life__toggle button.is-on{background:var(--navy)}
+.life__tree{position:relative;margin-top:2rem}
+.life__root{position:relative;display:flex;flex-direction:column;align-items:center;width:max-content;max-width:100%;margin:0 auto;padding:.8rem 1.6rem;border-radius:var(--radius);background:var(--navy-deep);color:#fff;text-align:center;box-shadow:var(--shadow)}
+.life__root-label{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.life__root strong{font-family:var(--font-display);font-weight:500;font-size:clamp(1.4rem,1.2rem + .8vw,1.9rem);line-height:1.15}
+.life__levels{position:relative;list-style:none;margin:0;padding:2.2rem 0 0;display:grid;gap:1.2rem}
+/* Connector lines: a stem from the condition down to a rail that feeds each card. */
+.life__levels::before{content:"";position:absolute;left:50%;top:0;height:2.2rem;border-left:2px solid var(--steel)}
+@media (min-width:860px){
+  .life__levels{grid-template-columns:repeat(3,1fr);padding-top:3rem}
+  .life__levels::before{height:1.5rem}
+  .life__levels::after{content:"";position:absolute;left:16.66%;right:16.66%;top:1.5rem;border-top:2px solid var(--steel)}
+  .life__card::before{content:"";position:absolute;left:50%;top:-1.5rem;height:1.5rem;border-left:2px solid var(--steel)}
+}
+.life__card{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:border-color .5s,box-shadow .5s,transform .45s var(--ease)}
+.life__card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.life.is-relief .life__card{border-color:#e6cf9a}
+.life__photo{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--mist)}
+.life__photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.82) contrast(.95);transform:scale(1.04);transition:filter .9s var(--ease),transform 1.2s var(--ease)}
+.life.is-relief .life__photo img{filter:none;transform:scale(1)}
+.life__body{padding:1.1rem 1.2rem 1.3rem}
+.life__body h3{display:flex;gap:.6rem;align-items:baseline;font-weight:600;font-size:1.35rem;color:var(--ink);margin-bottom:.5rem}
+.life__body h3 span{font-style:italic;font-weight:400;font-size:1rem;color:#b44f3a;transition:color .5s}
+.life.is-relief .life__body h3 span{color:var(--gold-text)}
+.life__swap{display:grid}
+.life__swap p{grid-area:1/1;font-size:.98rem;line-height:1.5;transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.life__pain{color:var(--ink-soft)}
+.life__relief{color:var(--ink);opacity:0;transform:translateY(8px)}
+.life.is-relief .life__pain{opacity:0;transform:translateY(-8px)}
+.life.is-relief .life__relief{opacity:1;transform:none}
+.life__factors{display:grid;gap:.8rem;margin-top:1.6rem;padding-top:1.4rem;border-top:1px dashed var(--steel)}
+@media (min-width:700px){.life__factors{grid-template-columns:auto 1fr 1fr;align-items:center}}
+.life__factors-label{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.life__factor{padding:.9rem 1.1rem;border-radius:var(--radius-sm);background:rgba(255,255,255,.6);border:1px solid var(--line);font-size:.95rem;line-height:1.45;color:var(--ink-soft)}
+.life__factor strong{display:block;color:var(--navy);font-weight:700}
+.life__note{margin-top:1.8rem;font-size:1.02rem;color:var(--ink-soft)}
+.life__note a{font-weight:700;color:var(--navy);text-underline-offset:3px}
+@media (prefers-reduced-motion:reduce){.life__photo img,.life__swap p{transition:none}}
+.life__photo img{position:absolute;inset:0}
+.life__photo .life__photo-relief{opacity:0;transition:opacity .9s var(--ease),filter .9s var(--ease),transform 1.2s var(--ease)}
+.life.is-relief .life__photo-relief{opacity:1}
+@media (max-width:859px){
+  .life__toggle{display:grid;width:100%}
+  .life__toggle button{padding:.5rem .6rem;white-space:nowrap}
+  .life__card{flex-direction:row}
+  .life__photo{flex:none;width:34%;aspect-ratio:auto;min-height:100%}
+  .life__body{padding:.9rem 1rem}
+  .life__body h3{font-size:1.15rem;margin-bottom:.3rem}
+  .life__swap p{font-size:.92rem;line-height:1.45}
+}
+
+.clinics-line{display:flex;gap:.8rem;align-items:flex-start;margin-top:1rem;padding:1rem 1.1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);font-size:.98rem;line-height:1.5;color:var(--ink-soft)}
+.clinics-line svg{flex:none;width:24px;height:24px;color:var(--navy);margin-top:.1rem}
+.clinics-line strong{color:var(--ink);font-weight:600}
+.clinics-line a{font-weight:700;color:var(--navy);text-underline-offset:3px;white-space:nowrap}

@@ -3,13 +3,9 @@ import ScrollProgress from './components/ScrollProgress.jsx';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import TrustBand from './components/TrustBand.jsx';
-import Feel from './components/Feel.jsx';
+import Life from './components/Life.jsx';
 import How from './components/How.jsx';
 import Steps from './components/Steps.jsx';
-import Aftercare from './components/Aftercare.jsx';
-import Gallery from './components/Gallery.jsx';
-import CtaBand from './components/CtaBand.jsx';
-import Price from './components/Price.jsx';
 import Clinician from './components/Clinician.jsx';
 import Testimonials from './components/Testimonials.jsx';
 import BeforeAfter from './components/BeforeAfter.jsx';
@@ -27,14 +23,10 @@ export default function App() {
       <main>
         <Hero />
         <TrustBand />
-        <Feel />
+        <Life />
         <How />
         <Steps />
-        <Aftercare />
-        <Gallery />
-        <Price />
         <Clinician />
-        <CtaBand />
         <Testimonials />
         <BeforeAfter />
         <Faq />

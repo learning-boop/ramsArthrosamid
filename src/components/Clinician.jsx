@@ -10,8 +10,8 @@ export default function Clinician() {
       <div className="wrap">
         {CLINICIAN.photo ? (
           <Reveal className="clin__portrait">
-            <img src={CLINICIAN.photo} alt={CLINICIAN.name} />
-            <div className="clin__badge"><strong>{CLINICIAN.name}</strong>{CLINICIAN.letters}</div>
+            <img src={CLINICIAN.photo} alt={CLINICIAN.fullName} />
+            <div className="clin__badge"><strong>{CLINICIAN.fullName}</strong>{CLINICIAN.letters}</div>
           </Reveal>
         ) : (
           /* No photo: a credentials card that leads with verifiable facts */
@@ -23,7 +23,7 @@ export default function Clinician() {
               </svg>
               <span>{initials}</span>
             </div>
-            <p className="clin__name">{CLINICIAN.name}</p>
+            <p className="clin__name">{CLINICIAN.fullName}</p>
             <p className="clin__letters">{CLINICIAN.letters}</p>
             <p className="clin__role">{CLINICIAN.role}</p>
             <dl className="clin__facts">
@@ -33,13 +33,13 @@ export default function Clinician() {
             </dl>
             <p className="clin__verified">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" /><path d="m8.5 12 2.5 2.5 4.5-5" /></svg>
-              HCPC registered · CSP · SoR
+              Accredited Arthrosamid® provider
             </p>
           </Reveal>
         )}
         <div>
-          <Reveal as="p" className="kicker">Your clinician</Reveal>
-          <Reveal as="h2" className="h2" id="clinTitle">Every Arthrosamid® injection is delivered personally by {CLINICIAN.name}</Reveal>
+          <Reveal as="p" className="kicker">Your clinician · Accredited Arthrosamid® provider</Reveal>
+          <Reveal as="h2" className="h2" id="clinTitle">Every Arthrosamid® injection is delivered personally by {CLINICIAN.fullName}, known to patients as Ram</Reveal>
           <Reveal as="p" className="lead measure">{CLINICIAN.intro}</Reveal>
           <Reveal as="ul" className={`clin__quals${allQuals ? ' is-open' : ''}`} id="clinQuals">
             {CLINICIAN.quals.map((q) => <li key={q}>{q}</li>)}

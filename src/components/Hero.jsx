@@ -3,6 +3,7 @@ import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion
 import Magnetic from './Magnetic.jsx';
 import { Phone, ChevronDown } from './Icons.jsx';
 import { CLINIC, PRICE, HERO_VIDEO } from '../config.js';
+import { CLINICIAN } from '../data/content.js';
 
 const EASE = [0.2, 0.7, 0.2, 1];
 const HEADLINE = 'Stop planning your day around your knee.';
@@ -124,7 +125,7 @@ export default function Hero() {
           </h1>
 
           <motion.p className="hero__sub lead" {...fade(1.2)}>
-            One ultrasound-guided injection for knee osteoarthritis. No surgery, home the same day.
+            One ultrasound-guided injection for knee osteoarthritis, given personally by {CLINICIAN.name}, an accredited Arthrosamid® provider. No surgery, home the same day.
           </motion.p>
 
           <motion.div className="hero__cta" {...fade(1.35)}>

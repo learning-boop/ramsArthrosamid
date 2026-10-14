@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Reveal from './Reveal.jsx';
 import { Pin } from './Icons.jsx';
 import OpeningHours, { OpenStatus } from './OpeningHours.jsx';
-import { CLINICS, CLINIC_OPTIONS } from '../data/content.js';
+import { CLINIC_OPTIONS } from '../data/content.js';
 import { CLINIC, FORM_ENDPOINT } from '../config.js';
 
 const EMPTY = { name: '', phone: '', email: '', clinic: CLINIC_OPTIONS[0], knee: 'Right', message: '', consent: false, website: '' };
@@ -54,7 +54,7 @@ export default function Book() {
         <div className="book__intro">
           <Reveal as="p" className="kicker">Book</Reveal>
           <Reveal as="h2" className="h2" id="bookTitle">Talk to us about your knee</Reveal>
-          <Reveal as="p" className="lead measure">Early and emergency appointments are available. If you can’t get to a clinic, home visits can be arranged.</Reveal>
+          <Reveal as="p" className="lead measure">Early and emergency appointments are available.</Reveal>
         </div>
         <div className="book__details">
           <Reveal className="hours-card">
@@ -65,10 +65,9 @@ export default function Book() {
             <OpeningHours />
             <p className="hours-card__note">Call <a href={CLINIC.phoneHref}>{CLINIC.phoneDisplay}</a> to book at any of our clinics.</p>
           </Reveal>
-          <Reveal as="ul" className="clinics">
-            {CLINICS.map((c) => (
-              <li key={c.name}><Pin /><div><strong>{c.name}</strong><span>{c.area}</span></div></li>
-            ))}
+          <Reveal as="p" className="clinics-line">
+            <Pin />
+            <span>Clinics in <strong>Rugby, Birmingham &amp; Solihull, Leicester and Milton Keynes</strong>, plus home visits. <a href={`${CLINIC.website}/contact/`}>Addresses and directions</a></span>
           </Reveal>
         </div>
 

@@ -2,18 +2,52 @@ export const NAV = [
   { href: '#home', label: 'Home' },
   { href: '#how', label: 'How it works' },
   { href: '#steps', label: 'Your appointment' },
-  { href: '#price', label: 'Price' },
   { href: '#clinician', label: 'Your clinician' },
   { href: '#faq', label: 'Questions' },
   { href: 'https://jointcareclinics.co.uk/contact/', label: 'Contact' },
 ];
 
-// "You know the feeling": the everyday moments knee osteoarthritis takes over.
-export const PAIN_MOMENTS = [
-  { icon: 'morning', title: 'Morning stiffness', body: 'The first steps of the day are the hardest, until the knee loosens.' },
-  { icon: 'stairs', title: 'Pain on stairs', body: 'Going up is hard, coming down is worse. You start avoiding them.' },
-  { icon: 'sitting', title: 'Aching after sitting', body: 'A car journey, a film, a meal out, and standing up again hurts.' },
-  { icon: 'swelling', title: 'Swelling and stiffness', body: 'A tight, warm, puffy knee that won’t bend the way it used to.' },
+// "Your whole life": how knee osteoarthritis spreads from the joint to the day to the people around you,
+// laid out like the WHO's ICF model (health condition → body → activity → participation, shaped by
+// your surroundings and by you). `pain`/`img` and `relief`/`reliefImg` are shown with a toggle.
+// Photos: Pexels licence (free commercial use); captions describe activities, never present people as patients.
+export const LIFE_LEVELS = [
+  {
+    key: 'body',
+    label: 'Your knee',
+    pain: 'Pain, stiffness and swelling. Hard first steps every morning, and a knee that won’t bend like it used to.',
+    relief: 'A cushioning gel layer in the joint lining, designed to ease pain, stiffness and swelling for years.',
+    img: './media/feel-stairs.jpg',
+    alt: 'An older man slowly climbing a long flight of outdoor steps',
+    reliefImg: './media/life-cycle.jpg',
+    reliefAlt: 'An older man in a helmet cycling towards the camera along a country lane',
+  },
+  {
+    key: 'activity',
+    label: 'Your day',
+    pain: 'Stairs, kneeling, long walks, lifting shopping or carrying the children all become a struggle.',
+    relief: 'Take the stairs, walk further, and pick up the children or grandchildren again.',
+    img: './media/day-struggle.jpg',
+    alt: 'An older man stopped on a beach walk, bent over and holding his knee',
+    reliefImg: './media/life-grandchild.jpg',
+    reliefAlt: 'A grandfather laughing as he carries his grandchild on his shoulders',
+  },
+  {
+    key: 'life',
+    label: 'Your life',
+    pain: 'Time off work, missed days out, and feeling left on the sidelines by the people you love.',
+    relief: 'Back to work, back to family days, and back to sharing the moments that matter.',
+    img: './media/life-alone.jpg',
+    alt: 'An older man sitting alone on a bench, looking out over the water',
+    reliefImg: './media/life-couple.jpg',
+    reliefAlt: 'A smiling older couple walking their small dog along a woodland path',
+  },
+];
+
+// The two things that shape every plan. Ram asks about both at the consultation.
+export const LIFE_FACTORS = [
+  { label: 'Your surroundings', body: 'A physical job, stairs at home, caring for children or parents.' },
+  { label: 'You', body: 'Your age, fitness, goals, and how you feel about surgery.' },
 ];
 
 export const STAGES = [
@@ -43,58 +77,35 @@ export const STATS = [
 
 export const STEPS = [
   {
-    title: 'Consultation',
-    body: 'We talk through your symptoms and goals, and examine the knee. If Arthrosamid® isn’t right for you, we’ll say so.',
+    title: 'Consultation and scan',
+    body: 'We talk through your symptoms and goals, examine the knee and scan it live with ultrasound. If Arthrosamid® isn’t right for you, we’ll say so.',
   },
   {
-    title: 'Diagnostic ultrasound scan',
-    body: 'A live scan confirms the diagnosis and rules out other causes of knee pain. You see the images as we go.',
-  },
-  {
-    title: 'Preparing the joint',
-    body: 'Local anaesthetic numbs the area, any excess fluid is drawn off, and you have a single dose of antibiotics.',
-  },
-  {
-    title: 'The Arthrosamid® injection',
-    body: 'Guided by ultrasound, the injection itself takes a few seconds. No stitches, just a small plaster.',
+    title: 'The injection',
+    body: 'The knee is numbed, any excess fluid drawn off, and the gel placed under ultrasound guidance in a few seconds. No stitches, just a plaster.',
     note: 'Needle-phobic? Tell us. It’s something we handle every week.',
   },
   {
-    title: 'Observation and aftercare',
-    body: 'A short rest, then home the same day with written aftercare. Please arrange a lift; you can’t drive for a few hours.',
+    title: 'Home the same day',
+    body: 'A short rest, then home with written aftercare and a direct number. Please arrange a lift; you can’t drive for a few hours.',
   },
-];
-
-export const TIMELINE = [
-  { when: 'Day 0', body: 'Walk out the same day. The knee is numb for a couple of hours while the anaesthetic wears off.' },
-  { when: 'Days 1 – 7', body: 'Some swelling, tightness or a feeling of heaviness is normal while the knee settles. Relative rest and gentle movement.' },
-  { when: 'Weeks 2 – 6', body: 'Improvement usually builds as irritation calms and the gel integrates with the lining.' },
-  { when: 'Months 3 – 12', body: 'Benefits continue. We review how you’re moving and what you’re back to doing.' },
-  { when: 'Up to 4 years', body: 'Clinical follow-up reports sustained pain reduction four years after a single injection.', last: true },
-];
-
-export const INCLUSIONS = [
-  'Clinical consultation with a consultant physiotherapist',
-  'Diagnostic ultrasound scan of the knee',
-  'Joint fluid aspiration, where needed',
-  'Single-dose antibiotics',
-  'Local anaesthetic',
-  'Ultrasound-guided Arthrosamid® injection (6 ml)',
-  'Written aftercare and a direct contact number',
 ];
 
 export const CLINICIAN = {
   name: 'Ram Rachaputi',
+  fullName: 'RamaKrishna Rachaputi',
   letters: 'BPT, PG Dip, PG Cert, MCSP, MSOR',
   intro: 'Ram is an HCPC-registered consultant physiotherapist, musculoskeletal sonographer and independent prescriber, with more than 20 years of NHS musculoskeletal experience and over 30,000 ultrasound-guided injections behind him.',
   quals: [
     'Bachelor of Physiotherapy, Karnatak University, 2001',
     'Postgraduate Diploma in Neuromusculoskeletal Healthcare, Keele University, 2003',
     'Injection therapy, 2012, and postgraduate certification in musculoskeletal diagnostic and interventional ultrasound',
-    'Practised at King’s College Hospital London, York, Coventry, Warwick, Walsall Manor, Freeman Newcastle and Ashford & St Peter’s',
+    'Practised at King’s College Hospital London, York University Hospital, Coventry University Hospital, Warwick & Stratford, Walsall Manor (Birmingham), Freeman Hospital Newcastle and Ashford & St Peter’s',
+    'Worked across radiology, rheumatology and physiotherapy departments, in hospitals and private clinics',
+    'Advanced procedures including SI joint, facet joint and coccyx injections, hydrodilatation for frozen shoulder, barbotage for calcific tendinopathy, and hyaluronic acid injections',
     'Several thousand diagnostic scans and more than 30,000 ultrasound-guided injections, including many patients with needle phobia',
   ],
-  registrations: ['HCPC registered', 'Chartered Society of Physiotherapy', 'Society of Radiographers'],
+  registrations: ['Accredited Arthrosamid® provider', 'HCPC registered', 'Chartered Society of Physiotherapy', 'Society of Radiographers'],
   role: 'Consultant physiotherapist · MSK sonographer · Independent prescriber',
   // Shown on the credentials card (used while there's no photo). All facts from the profile above.
   highlights: [
@@ -125,6 +136,8 @@ export const FAQS = [
   { q: 'Does the injection hurt?', a: 'Most people feel pressure rather than pain. The skin is numbed first, and ultrasound guidance keeps the injection brief. If you’re needle-phobic, just tell us when you book.' },
   { q: 'How long does the appointment take?', a: 'Around 60 minutes for the consultation, scan, injection and a short rest. The injection itself takes a few seconds.' },
   { q: 'When will I notice a difference?', a: 'It isn’t an instant painkiller. Most people notice improvement over days to weeks, building as the gel settles in. A mild flare in the first week is common.' },
+  { q: 'What should I expect afterwards?', a: 'Some swelling, tightness or heaviness in the first week is normal while the knee settles. Improvement usually builds over two to six weeks, and we review how you’re moving at three to twelve months.' },
+  { q: 'How long does it last?', a: 'Arthrosamid® isn’t absorbed like steroid or hyaluronic acid injections. Clinical follow-up reports sustained pain relief four years after a single injection, though every knee responds differently.' },
   { q: 'What are the side effects?', a: 'Usually temporary pain, swelling or a feeling of tightness that settles within days to a few weeks. Infection is rare, which is why you have antibiotics on the day.' },
   { q: 'Can I have both knees treated?', a: 'Yes. Each knee is treated separately, and we’ll advise whether to do both on the same day or stage them.' },
   { q: 'Can I drive home afterwards?', a: 'No. Please bring someone or arrange transport. Most motor insurance won’t cover you for a few hours after a local anaesthetic.' },
@@ -140,19 +153,11 @@ export const CLINICS = [
 
 export const CLINIC_OPTIONS = ['Rugby', 'Birmingham & Solihull', 'Leicester', 'Milton Keynes', 'Home visit', 'Not sure yet'];
 
-// Photography (Pexels licence: free commercial use; captions describe activities, never present people as patients).
-// Replace with your own photos in public/media/ any time.
-export const GALLERY = [
-  { src: './media/life-grandchild.jpg', alt: 'A grandfather laughing as he carries his grandchild on his shoulders', caption: 'Carrying the grandchildren again.', ratio: '4 / 5' },
-  { src: './media/life-cycle.jpg', alt: 'An older man in a helmet cycling towards the camera along a country lane', caption: 'Back on the bike.', ratio: '3 / 4' },
-  { src: './media/life-couple.jpg', alt: 'A smiling older couple walking their small dog along a woodland path', caption: 'Walking further, together.', ratio: '4 / 5' },
-];
-
 // Trust band under the hero. Every item is a fact stated elsewhere on the page.
 export const CREDENTIALS = [
   { big: '30,000+', small: 'ultrasound-guided injections' },
   { big: 'HCPC', small: 'registered clinician' },
-  { big: '20+ yrs', small: 'NHS musculoskeletal experience' },
+  { big: 'Accredited', small: 'Arthrosamid® provider' },
   { big: 'CE-marked', small: 'Arthrosamid® hydrogel' },
 ];
 

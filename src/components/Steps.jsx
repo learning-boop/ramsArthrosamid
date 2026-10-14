@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion, useScroll, useMotionValueEvent, useReducedMotion } from 'framer-motion';
 import Reveal from './Reveal.jsx';
-import ParallaxImage from './ParallaxImage.jsx';
 import { STEPS } from '../data/content.js';
 
 /** The gold line fills as the reader moves down the list; each step lights up as the line reaches it. */
@@ -23,17 +22,11 @@ export default function Steps() {
         <div className="steps__intro">
           <div>
             <Reveal as="p" className="kicker">Your appointment</Reveal>
-            <Reveal as="h2" className="h2" id="stepsTitle">Everything in one visit, step by step</Reveal>
+            <Reveal as="h2" className="h2" id="stepsTitle">Everything in one visit</Reveal>
           </div>
           <Reveal as="p" className="lead">
-            Where it’s appropriate, the consultation, scan and injection all happen in the same appointment of around 60 minutes. Traditionally this takes two or three hospital visits.
+            Where it’s appropriate, consultation, scan and injection happen in one appointment of around 60 minutes, instead of two or three hospital visits.
           </Reveal>
-        </div>
-
-        <div className="steps__media">
-          <ParallaxImage className="steps__photo steps__photo--a" src="./media/knee-exam.jpg" alt="A clinician examining a patient’s knee on a treatment couch" ratio="3 / 2" from="left" />
-          <ParallaxImage className="steps__photo steps__photo--b" src="./media/ultrasound.jpg" alt="A clinician in blue gloves adjusting an ultrasound machine" ratio="4 / 5" speed={16} />
-          <Reveal className="steps__chip" delay={0.5}><b>60 min</b>consultation, scan and injection</Reveal>
         </div>
 
         <ol className="steps__list" ref={listRef}>
