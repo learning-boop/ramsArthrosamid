@@ -19,7 +19,7 @@ Deploy the contents of `dist/` to any static host (cPanel public_html, Netlify, 
 | File | What to edit there |
 | --- | --- |
 | `src/config.js` | Phone, email, address, prices, and `FORM_ENDPOINT` |
-| `book.html`, `src/components/BookPage.jsx` | Booking page. Requests are emailed via FormSubmit: Rugby, Birmingham & Solihull, Leicester and Milton Keynes to info@jointcareclinics.co.uk, Newcastle to info@jointcarenortheast.co.uk (`BOOKING` in config.js, `inbox` per clinic in content.js). Each inbox must click FormSubmit's one-time activation email. |
+| `book.html`, `src/components/BookPage.jsx` | Booking page. Requests are emailed via [Web3Forms](https://web3forms.com): Rugby, Birmingham & Solihull, Leicester and Milton Keynes to info@jointcareclinics.co.uk, Newcastle to info@jointcarenortheast.co.uk (`BOOKING` in config.js, `inbox` per clinic in content.js). Paste each inbox's Web3Forms access key into `BOOKING.inboxes`; until then the form shows a call/email fallback. |
 | `src/data/content.js` | All copy: nav, steps, timeline, comparison table, inclusions, suitability lists, clinician profile, reviews, FAQs, clinics |
 | `src/styles/global.css` | Design tokens (`:root`), layout and every animation keyframe |
 | `src/components/Hero.jsx` | Full-screen video hero: name, headline, one line of copy, buttons and a three-stat strip |

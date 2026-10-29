@@ -17,15 +17,15 @@ export const BRAND = {
   name: 'Knee Care Clinics',
 };
 
-// Booking form delivery. Requests are emailed through FormSubmit (formsubmit.co, free, no account):
-// each inbox must click the one-time "Activate Form" email FormSubmit sends after its first request.
-// `inbox` on each clinic in content.js picks the address below.
+// Booking form delivery through Web3Forms (web3forms.com, free). Each inbox needs its own access key:
+// enter the address at web3forms.com, the key arrives by email, paste it below. Keys are meant to sit in
+// front-end code; each one can only send to its own inbox. `inbox` on each clinic in content.js picks one.
 export const BOOKING = {
+  endpoint: 'https://api.web3forms.com/submit',
   inboxes: {
-    jointcare: 'info@jointcareclinics.co.uk',
-    northeast: 'info@jointcarenortheast.co.uk',
+    jointcare: { email: 'info@jointcareclinics.co.uk', accessKey: '' },
+    northeast: { email: 'info@jointcarenortheast.co.uk', accessKey: '' },
   },
-  endpoint: (email) => `https://formsubmit.co/ajax/${email}`,
 };
 
 export const PRICE = {
