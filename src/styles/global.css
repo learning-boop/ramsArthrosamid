@@ -116,7 +116,8 @@ button{font:inherit;color:inherit}
 .nav .btn{min-height:46px;padding:.6rem 1.2rem;font-size:.98rem;white-space:nowrap;color:var(--navy-ink)}
 .menu-btn{display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:.5rem .9rem;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--surface);font-weight:600;cursor:pointer}
 .menu-btn svg{width:22px;height:22px}
-@media (min-width:1060px){.nav{display:flex}.header .menu-btn{display:none}}
+@media (min-width:1200px){.nav{display:flex}.header .menu-btn{display:none}}
+@media (min-width:1200px) and (max-width:1319px){.nav{gap:.95rem}.nav a:not(.btn){font-size:.9rem}.nav .btn{padding-inline:1rem}}
 .mobile-nav{display:none;border-top:1px solid var(--line);background:var(--surface)}
 .mobile-nav.is-open{display:block}
 .mobile-nav .wrap{display:grid;gap:.25rem;padding-block:.75rem 1rem}
@@ -169,7 +170,7 @@ button{font:inherit;color:inherit}
 /* Buttons on the dark film */
 .btn--glass{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.35);color:#fff;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 .btn--glass:hover{background:#fff;color:var(--navy-ink);border-color:#fff}
-.btn--shine{overflow:hidden}
+.btn--shine{position:relative;overflow:hidden}
 .btn--shine::before{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);pointer-events:none}
 .anim .btn--shine::before{animation:shine 4.5s ease-in-out 3s infinite}
 @keyframes shine{0%,70%{left:-60%}100%{left:130%}}
@@ -576,6 +577,30 @@ html:not(.anim) .hero__hl{background-size:100% 100%}
 .whatis__list li{display:flex;gap:.8rem;align-items:flex-start;padding:.85rem 1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);font-size:1.05rem;line-height:1.45;color:var(--ink)}
 .whatis__list svg{flex:none;width:22px;height:22px;margin-top:.1rem;padding:3px;border-radius:50%;background:var(--gold);color:var(--navy-ink)}
 @media (max-width:759px){.whatis__list li{font-size:1rem;padding:.75rem .85rem}}
+
+/* ---------------- Price ---------------- */
+.price__intro{max-width:640px;margin-bottom:2.2rem}
+.price__intro .lead{margin-top:.2rem}
+.price__cards{display:grid;gap:1.4rem;align-items:start}
+@media (min-width:900px){.price__cards{grid-template-columns:1.25fr 1fr}}
+.price__card{position:relative;padding:clamp(1.5rem,3vw,2.2rem);border-radius:calc(var(--radius) + 4px)}
+.price__card--main{background:var(--surface);color:var(--ink);border-top:6px solid var(--gold);box-shadow:0 30px 60px -30px rgba(0,0,0,.55)}
+.price__card--alt{background:rgba(255,255,255,.06);border:1px solid var(--on-navy-line);color:var(--on-navy)}
+.price__badge{display:inline-block;margin-bottom:.8rem;padding:.3rem .75rem;border-radius:999px;background:var(--gold);color:var(--navy-ink);font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.price__badge--alt{background:rgba(255,255,255,.12);color:#fff}
+.price__name{font-family:var(--font-display);font-weight:600;font-size:1.3rem;line-height:1.25}
+.price__card--main .price__name{color:var(--navy)}
+.price__amount{display:flex;align-items:baseline;flex-wrap:wrap;gap:.5rem;margin:.5rem 0 1.2rem}
+.price__amount b{font-family:var(--font-display);font-weight:600;font-size:clamp(3rem,2.4rem + 2.6vw,4.4rem);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.price__card--main .price__amount b{color:var(--navy)}
+.price__card--alt .price__amount b{color:var(--gold)}
+.price__amount span{font-size:1rem;font-weight:600;opacity:.8}
+.price__inc{list-style:none;margin:0 0 1.6rem;padding:1.2rem 0 0;border-top:1px solid var(--line);display:grid;gap:.65rem}
+.price__inc li{display:flex;gap:.7rem;align-items:flex-start;font-weight:500}
+.price__inc svg{flex:none;width:20px;height:20px;margin-top:.15rem;padding:3px;border-radius:50%;background:var(--gold);color:var(--navy-ink)}
+.price__alt-text{color:var(--on-navy-soft);margin-bottom:1.5rem}
+.price__fine{margin-top:1.4rem;font-size:.9rem;color:var(--on-navy-soft)}
+@media (max-width:759px){.price__card .btn,.price__card .magnetic{width:100%}}
 
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}

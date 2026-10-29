@@ -6,6 +6,7 @@ import TrustBand from './components/TrustBand.jsx';
 import WhatIs from './components/WhatIs.jsx';
 import How from './components/How.jsx';
 import Steps from './components/Steps.jsx';
+import Price from './components/Price.jsx';
 import Clinician from './components/Clinician.jsx';
 import Testimonials from './components/Testimonials.jsx';
 import BeforeAfter from './components/BeforeAfter.jsx';
@@ -26,6 +27,7 @@ export default function App() {
         <WhatIs />
         <How />
         <Steps />
+        <Price />
         <Clinician />
         <Testimonials />
         <BeforeAfter />

@@ -2,6 +2,7 @@ export const NAV = [
   { href: '#home', label: 'Home' },
   { href: '#how', label: 'How it works' },
   { href: '#steps', label: 'Your appointment' },
+  { href: '#price', label: 'Price' },
   { href: '#clinician', label: 'Your clinician' },
   { href: '#faq', label: 'Questions' },
   { href: '#clinics', label: 'Clinics' },
@@ -40,6 +41,17 @@ export const STATS = [
   { value: 5, prefix: 'up to ', suffix: ' yrs', label: 'of pain relief reported in clinical follow-up after a single treatment.' },
   { value: 30000, prefix: '', suffix: '+', label: 'ultrasound-guided injections carried out by our lead clinician.', comma: true },
   { value: 20, prefix: '', suffix: '+ yrs', label: 'of NHS musculoskeletal experience behind every appointment.' },
+];
+
+// Everything the £2,300 per-knee price covers (shown on the Price card).
+export const INCLUSIONS = [
+  'Consultation with Ram',
+  'Diagnostic ultrasound scan of the knee',
+  'Joint fluid drained, where needed',
+  'Single dose of antibiotics',
+  'Local anaesthetic',
+  'Ultrasound-guided Arthrosamid® injection (6 ml)',
+  'Written aftercare and a direct contact number',
 ];
 
 export const STEPS = [
