@@ -7,13 +7,14 @@ export const NAV = [
   { href: '#clinics', label: 'Clinics' },
 ];
 
-// "What is Arthrosamid®?": five plain lines for people new to the treatment.
-export const WHAT_IS = [
-  'Arthrosamid® is a single injection for knee osteoarthritis.',
-  'It’s a soft gel, 97.5% water, placed into the knee using ultrasound.',
-  'The gel joins the knee’s lining and works like a cushion.',
-  'Your body doesn’t break it down, so relief has been reported for up to 5 years.',
-  'No surgery and no general anaesthetic, and you go home the same day.',
+// "Why people choose Arthrosamid®": benefit-led reasons that answer common doubts.
+// Every claim matches wording used elsewhere on the site (FAQ, How it works); no guarantees.
+export const WHY_CHOOSE = [
+  { title: 'Tried everything else?', body: 'Built for when painkillers, physio or steroid injections haven’t given lasting relief.' },
+  { title: 'Not ready for a knee replacement?', body: 'A non-surgical option that may help you put an operation off.' },
+  { title: 'Feel the difference in weeks.', body: 'Most people notice improvement within days to weeks, building as the gel settles in.' },
+  { title: 'Get back to what you’ve given up.', body: 'Long walks, stairs, gardening and time with the grandchildren.' },
+  { title: 'No pressure to decide today.', body: 'Start with a consultation and scan, and get an honest answer on whether it’s right for you.' },
 ];
 
 export const STAGES = [

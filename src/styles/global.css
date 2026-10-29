@@ -563,11 +563,14 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 html:not(.anim) .hero__hl{background-size:100% 100%}
 @keyframes hlsweep{to{background-size:100% 100%}}
 
-/* ---------------- What is Arthrosamid? ---------------- */
+/* ---------------- Why people choose Arthrosamid ---------------- */
 .whatis{padding-block:clamp(48px,6vw,84px)}
 .whatis .wrap{display:grid;gap:1.4rem 3rem;align-items:center}
 @media (min-width:900px){.whatis .wrap{grid-template-columns:.8fr 1.2fr}}
 .whatis .h2{margin-bottom:0}
+.whatis__cta{margin-top:1.6rem}
+.whatis__list strong{color:var(--navy);font-weight:700}
+@media (max-width:899px){.whatis__head{display:contents}.whatis__cta{order:2;margin-top:.2rem}.whatis__cta .magnetic,.whatis__cta .btn{width:100%}}
 .whatis__list{list-style:none;margin:0;padding:0;display:grid;gap:.7rem}
 .whatis__list li{display:flex;gap:.8rem;align-items:flex-start;padding:.85rem 1rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);font-size:1.05rem;line-height:1.45;color:var(--ink)}
 .whatis__list svg{flex:none;width:22px;height:22px;margin-top:.1rem;padding:3px;border-radius:50%;background:var(--gold);color:var(--navy-ink)}
