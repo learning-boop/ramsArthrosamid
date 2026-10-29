@@ -3,7 +3,7 @@ import { Pin, Phone } from './Icons.jsx';
 import { CLINICS } from '../data/content.js';
 import { CLINIC } from '../config.js';
 
-const mapsUrl = (c) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Joint Care Clinics ${c.address}`)}`;
+const mapsUrl = (c) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(c.mapsQuery || `Joint Care Clinics ${c.address}`)}`;
 
 export default function Clinics() {
   return (
@@ -24,6 +24,7 @@ export default function Clinics() {
             <Reveal as="li" key={c.name} className="clinic-card" delay={0.08 * i}>
               <span className="clinic-card__pin"><Pin /></span>
               <h3>{c.name}</h3>
+              {c.operator && <p className="clinic-card__operator">{c.operator}</p>}
               <address>{c.address}</address>
               <a href={mapsUrl(c)} target="_blank" rel="noopener noreferrer">Get directions</a>
             </Reveal>

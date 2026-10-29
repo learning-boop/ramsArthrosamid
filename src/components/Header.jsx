@@ -44,7 +44,7 @@ export default function Header() {
               <a href={`mailto:${CLINIC.email}`}>{CLINIC.email}</a>
             </span>
           </span>
-          <span className="topbar__clinics">Clinics in Rugby, Birmingham, Leicester and Milton Keynes</span>
+          <span className="topbar__clinics">Clinics in Rugby, Birmingham, Leicester, Milton Keynes and Newcastle</span>
         </div>
       </div>
 

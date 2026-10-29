@@ -10,7 +10,7 @@ export default function Footer() {
           <a className="brand" href="#home" aria-label={`${BRAND.name} home`}>
             <Logo tone="white" />
           </a>
-          <p className="footer__blurb">Private musculoskeletal ultrasound scans and ultrasound-guided injections across Warwickshire, the West Midlands, Buckinghamshire and Leicestershire.</p>
+          <p className="footer__blurb">Private musculoskeletal ultrasound scans and ultrasound-guided injections across Warwickshire, the West Midlands, Buckinghamshire, Leicestershire and the North East.</p>
           <div className="footer__regs"><span>HCPC</span><span>CSP</span><span>SoR</span></div>
         </div>
         <div>
