@@ -147,7 +147,7 @@ export default function Hero() {
           : <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5v14l12-7Z" /></svg>}
       </button>
 
-      <motion.a className="scroll-cue" href="#how" aria-label="Scroll to read more" {...fade(2)}>
+      <motion.a className="scroll-cue" href="#about" aria-label="Scroll to read more" {...fade(2)}>
         <span>Scroll</span><ChevronDown />
       </motion.a>
     </section>

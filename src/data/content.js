@@ -7,6 +7,15 @@ export const NAV = [
   { href: '#clinics', label: 'Clinics' },
 ];
 
+// "What is Arthrosamid®?": five plain lines for people new to the treatment.
+export const WHAT_IS = [
+  'Arthrosamid® is a single injection for knee osteoarthritis.',
+  'It’s a soft gel, 97.5% water, placed into the knee using ultrasound.',
+  'The gel joins the knee’s lining and works like a cushion.',
+  'Your body doesn’t break it down, so relief has been reported for up to 5 years.',
+  'No surgery and no general anaesthetic, and you go home the same day.',
+];
+
 export const STAGES = [
   {
     title: 'A soft gel, placed precisely',

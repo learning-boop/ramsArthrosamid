@@ -3,6 +3,7 @@ import ScrollProgress from './components/ScrollProgress.jsx';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
 import TrustBand from './components/TrustBand.jsx';
+import WhatIs from './components/WhatIs.jsx';
 import How from './components/How.jsx';
 import Steps from './components/Steps.jsx';
 import Clinician from './components/Clinician.jsx';
@@ -22,6 +23,7 @@ export default function App() {
       <main>
         <Hero />
         <TrustBand />
+        <WhatIs />
         <How />
         <Steps />
         <Clinician />
