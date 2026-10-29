@@ -54,6 +54,13 @@ export const INCLUSIONS = [
   'Written aftercare and a direct contact number',
 ];
 
+// "Also available": other ultrasound-guided injections Ram offers. Plain words, no promises.
+export const OTHER_INJECTIONS = [
+  { icon: 'gel', aka: 'Gel injection', name: 'Hyaluronic acid', body: 'A lubricating gel that tops up the knee’s natural joint fluid, often used for osteoarthritis. Relief can last several months.' },
+  { icon: 'prp', aka: 'PRP', name: 'Platelet-rich plasma', body: 'A concentrate of platelets from a small sample of your own blood, injected to support the body’s natural healing in joints and tendons.' },
+  { icon: 'steroid', aka: 'Cortisone', name: 'Steroid injection', body: 'A strong anti-inflammatory that can quickly calm a painful flare-up. Relief usually lasts weeks to a few months.' },
+];
+
 export const STEPS = [
   {
     title: 'Consultation and ultrasound scan',

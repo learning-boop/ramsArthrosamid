@@ -10,6 +10,7 @@ import { CLINIC, BRAND, PRICE, BOOKING } from '../config.js';
 const OPTIONS = [
   { value: 'treatment', label: `Full Arthrosamid® treatment (${PRICE.perKnee} per knee, all-inclusive)` },
   { value: 'consultation', label: `Consultation and ultrasound scan only (${PRICE.consultationAndScan})` },
+  { value: 'other', label: 'Another injection (hyaluronic acid, PRP or steroid)' },
   { value: 'unsure', label: 'Not sure yet, I’d like advice' },
 ];
 const KNEES = ['Right', 'Left', 'Both', 'Not sure'];

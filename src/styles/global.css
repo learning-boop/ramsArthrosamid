@@ -662,6 +662,20 @@ html:not(.anim) .hero__hl{background-size:100% 100%}
 .book-call{width:100%;margin-bottom:.9rem}
 @media (max-width:759px){.book-form .form__actions .btn{width:100%}.form__alt{width:100%;text-align:center}}
 
+/* ---------------- Also available (other injections) ---------------- */
+.other-inj{padding-block:clamp(48px,6vw,84px)}
+.other-inj__intro{margin-bottom:1.8rem}
+.other-inj__list{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+@media (min-width:760px){.other-inj__list{grid-template-columns:repeat(3,1fr)}}
+.other-inj__card{display:flex;flex-direction:column;padding:1.4rem 1.3rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.other-inj__card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.other-inj__icon{display:grid;place-items:center;width:52px;height:52px;margin-bottom:.9rem;border-radius:14px;background:linear-gradient(150deg,#fff,var(--mist));box-shadow:inset 0 0 0 1px var(--line)}
+.other-inj__icon svg{width:34px;height:34px;color:var(--navy)}
+.other-inj__aka{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-text)}
+.other-inj__card h3{margin:.15rem 0 .5rem;font-family:var(--font-display);font-weight:600;font-size:1.35rem;color:var(--navy)}
+.other-inj__card p:not(.other-inj__aka){color:var(--ink-soft);font-size:.97rem;line-height:1.5;margin-bottom:1rem}
+.other-inj__card a{margin-top:auto;font-weight:700;color:var(--navy);text-underline-offset:3px}
+
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
