@@ -32,7 +32,7 @@ export default function Steps() {
             <Reveal as="h2" className="h2" id="stepsTitle">Everything in one visit</Reveal>
           </div>
           <Reveal as="p" className="lead">
-            Where it’s appropriate, consultation, scan and injection happen in one appointment of around 60 minutes, instead of two or three hospital visits.
+            Where it’s appropriate, consultation, scan and injection all happen in a single visit, instead of two or three hospital visits.
           </Reveal>
         </div>
 
@@ -63,7 +63,7 @@ export default function Steps() {
                 <ParallaxImage className="step__photo" src={s.img} alt={s.alt} ratio="16 / 9" speed={8} from={i % 2 ? 'right' : 'left'} />
                 <h3 className="h3">{s.title}</h3>
                 <p>{s.body}</p>
-                {s.note && <span className="step__time">{s.note}</span>}
+                {s.note && <span className={`step__time${s.noteIcon ? ` step__time--${s.noteIcon}` : ''}`}>{s.note}</span>}
               </div>
             </Reveal>
           ))}

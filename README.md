@@ -51,3 +51,4 @@ Deploy the contents of `dist/` to any static host (cPanel public_html, Netlify, 
 
 - Hero film: “Grandfather and grandson walking in forest”, [Pexels](https://www.pexels.com/video/grandfather-and-grandson-walking-in-forest-10431051/), [Pexels licence](https://www.pexels.com/license/) (free commercial use; don’t present the people as patients). Mirrored, trimmed to a 15 s seamless loop, full HD `hero.mp4` (1920×1012, ~7.3 MB) and a phone crop `hero-mobile.mp4` (720×942, ~3.4 MB).
 - Photos: [Unsplash](https://unsplash.com/license) licence (knee exam, ultrasound, beach couple).
+- Antibiotics step photo: [Pexels](https://www.pexels.com/photo/6753297/) ([Pexels licence](https://www.pexels.com/license/)).

@@ -44,13 +44,21 @@ export const STATS = [
 
 export const STEPS = [
   {
-    title: 'Consultation and scan',
+    title: 'Consultation and ultrasound scan',
     img: './media/knee-exam.jpg',
     alt: 'A clinician examining a patient’s knee on a treatment couch',
     body: 'We talk through your symptoms and goals, examine the knee and scan it live with ultrasound. If Arthrosamid® isn’t right for you, we’ll say so.',
   },
   {
-    title: 'The injection',
+    title: 'Antibiotics',
+    img: './media/antibiotic.jpg',
+    alt: 'A hand offering a tablet alongside a glass of water',
+    body: 'You’re given a single dose of antibiotics to help protect the knee from infection.',
+    note: 'There’s a 60–90 minute wait after the antibiotics before your injection.',
+    noteIcon: 'clock',
+  },
+  {
+    title: 'The ultrasound-guided injection',
     img: './media/ultrasound.jpg',
     alt: 'A clinician in blue gloves adjusting an ultrasound machine',
     body: 'The knee is numbed, any excess fluid drawn off, and the gel placed under ultrasound guidance in a few seconds. No stitches, just a plaster.',
@@ -60,7 +68,7 @@ export const STEPS = [
     title: 'Home the same day',
     img: './media/beach-couple.jpg',
     alt: 'An older couple walking together along a beach',
-    body: 'A short rest, then home with written aftercare and a direct number. Please arrange a lift; you can’t drive for a few hours.',
+    body: 'A short rest, then home with written aftercare and a direct number. Most patients are able to drive again after a few hours.',
   },
 ];
 
@@ -68,7 +76,7 @@ export const CLINICIAN = {
   name: 'Ram Rachaputi',
   fullName: 'RamaKrishna Rachaputi',
   letters: 'BPT, PG Dip, PG Cert, MCSP, MSOR',
-  intro: 'Ram is an HCPC-registered consultant physiotherapist, musculoskeletal sonographer and independent prescriber, with more than 20 years of NHS musculoskeletal experience and over 30,000 ultrasound-guided injections behind him.',
+  intro: 'Ram is an HCPC-registered consultant physiotherapist, musculoskeletal sonographer and independent prescriber, with more than 25 years of NHS musculoskeletal experience and over 30,000 ultrasound-guided injections behind him.',
   quals: [
     'Bachelor of Physiotherapy, Karnatak University, 2001',
     'Postgraduate Diploma in Neuromusculoskeletal Healthcare, Keele University, 2003',
@@ -83,7 +91,7 @@ export const CLINICIAN = {
   // Shown on the credentials card (used while there's no photo). All facts from the profile above.
   highlights: [
     { big: '30,000+', small: 'ultrasound-guided injections' },
-    { big: '20+ yrs', small: 'NHS musculoskeletal experience' },
+    { big: '25+ yrs', small: 'NHS musculoskeletal experience' },
     { big: '4', small: 'university-qualified specialisms' },
   ],
   // Optional. With no photo, a credentials card is shown instead. To add one later,
@@ -107,13 +115,13 @@ export const REVIEWS = [
 
 export const FAQS = [
   { q: 'Does the injection hurt?', a: 'Most people feel pressure rather than pain. The skin is numbed first, and ultrasound guidance keeps the injection brief. If you’re needle-phobic, just tell us when you book.' },
-  { q: 'How long does the appointment take?', a: 'Around 60 minutes for the consultation, scan, injection and a short rest. The injection itself takes a few seconds.' },
+  { q: 'How long does the appointment take?', a: 'Allow around 2 to 3 hours. That includes the consultation and scan, a 60–90 minute wait after your antibiotics, the injection and a short rest. The injection itself takes a few seconds.' },
   { q: 'When will I notice a difference?', a: 'It isn’t an instant painkiller. Most people notice improvement over days to weeks, building as the gel settles in. A mild flare in the first week is common.' },
   { q: 'What should I expect afterwards?', a: 'Some swelling, tightness or heaviness in the first week is normal while the knee settles. Improvement usually builds over two to six weeks, and we review how you’re moving at three to twelve months.' },
   { q: 'How long does it last?', a: 'Arthrosamid® isn’t absorbed like steroid or hyaluronic acid injections. Clinical follow-up reports sustained pain relief up to five years after a single injection, though every knee responds differently.' },
   { q: 'What are the side effects?', a: 'Usually temporary pain, swelling or a feeling of tightness that settles within days to a few weeks. Infection is rare, which is why you have antibiotics on the day.' },
   { q: 'Can I have both knees treated?', a: 'Yes. Each knee is treated separately, and we’ll advise whether to do both on the same day or stage them.' },
-  { q: 'Can I drive home afterwards?', a: 'No. Please bring someone or arrange transport. Most motor insurance won’t cover you for a few hours after a local anaesthetic.' },
+  { q: 'Can I drive home afterwards?', a: 'Most patients are able to drive again after a few hours, once the local anaesthetic has worn off. Some motor insurers have their own rules after a local anaesthetic, so it’s worth checking your policy.' },
 ];
 
 // Joint Care Clinics locations where Ram sees patients (from jointcareclinics.co.uk/contact).
