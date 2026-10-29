@@ -212,7 +212,6 @@ button{font:inherit;color:inherit}
 .step__body p{color:var(--ink-soft)}
 .step__time{display:inline-block;margin-top:.8rem;font-size:.85rem;color:var(--ink-faint)}
 
-
 /* ---------------- Clinician ---------------- */
 .clin .wrap{display:grid;gap:clamp(2rem,5vw,4rem);align-items:start}
 @media (min-width:900px){.clin .wrap{grid-template-columns:.8fr 1.2fr}}
@@ -416,7 +415,6 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
   .step__body{padding:1rem 1.05rem}
   .step__body p{font-size:.95rem}
 
-
   /* Clinician: compact header, collapsible list */
   .clin__card{max-width:none;padding:1.4rem 1.1rem}
   .clin__seal{width:96px;height:96px;margin-bottom:.8rem}
@@ -565,71 +563,10 @@ body.has-mobilebar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
 html:not(.anim) .hero__hl{background-size:100% 100%}
 @keyframes hlsweep{to{background-size:100% 100%}}
 
-/* ---------------- New to Arthrosamid? ---------------- */
-.explain__intro{display:grid;gap:1rem;align-items:end;margin-bottom:2.2rem}
-@media (min-width:900px){.explain__intro{grid-template-columns:1fr 1fr;gap:3rem}}
-.explain__intro .h2{margin-bottom:0}
-.explain__facts{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
-@media (min-width:640px){.explain__facts{grid-template-columns:1fr 1fr}}
-@media (min-width:1060px){.explain__facts{grid-template-columns:repeat(4,1fr)}}
-.explain__fact{padding:1.3rem 1.2rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
-.explain__fact:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.explain__icon{display:grid;place-items:center;width:56px;height:56px;margin-bottom:.9rem;border-radius:16px;color:var(--navy);background:linear-gradient(150deg,#fff,var(--mist));box-shadow:inset 0 0 0 1px var(--line)}
-.explain__icon svg{width:36px;height:36px}
-.explain__fact h3{font-family:var(--font-display);font-weight:600;font-size:1.3rem;line-height:1.2;margin-bottom:.4rem;color:var(--ink)}
-.explain__fact p{font-size:.97rem;line-height:1.5;color:var(--ink-soft)}
-.explain__subhead{margin:3rem 0 1.2rem;font-family:var(--font-display);font-weight:600;font-size:clamp(1.4rem,1.2rem + .8vw,1.9rem);color:var(--ink)}
-.explain__compare{display:grid;gap:1rem;align-items:stretch}
-@media (min-width:860px){.explain__compare{grid-template-columns:1fr 1fr 1.15fr}}
-.explain__hint{display:none}
-@media (max-width:859px){
-  .explain__compare{display:flex;gap:.8rem;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(-1 * clamp(16px,4vw,40px));padding:1rem clamp(16px,4vw,40px) .6rem;scrollbar-width:none}
-  .explain__compare::-webkit-scrollbar{display:none}
-  .explain__compare>*{flex:0 0 82%;scroll-snap-align:start}
-  .explain__card{height:100%}
-  .explain__compare>.is-featured{order:-1}
-  .explain__hint{display:block;text-align:right;font-size:.85rem;color:var(--ink-faint);margin-top:.2rem}
-}
-@media (max-width:639px){
-  .explain__intro{margin-bottom:1.4rem}
-  .explain__facts{grid-template-columns:1fr 1fr;gap:.6rem}
-  .explain__fact{padding:.9rem .85rem}
-  .explain__icon{width:42px;height:42px;border-radius:12px;margin-bottom:.6rem}
-  .explain__icon svg{width:28px;height:28px}
-  .explain__fact h3{font-size:1.05rem}
-  .explain__fact p{font-size:.88rem;line-height:1.4}
-  .explain__subhead{margin:2rem 0 .2rem;font-size:1.3rem}
-  .explain__card{padding:1.1rem 1rem}
-  .explain__card h4{font-size:1.25rem}
-  .explain__what{font-size:.92rem;margin-bottom:.7rem}
-}
-.explain__card{position:relative;padding:1.4rem 1.3rem;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius)}
-.explain__card.is-featured{border:2px solid var(--gold);background:linear-gradient(170deg,#fffaf0,#fff);box-shadow:var(--shadow)}
-.explain__badge{position:absolute;top:-.8rem;left:1.2rem;padding:.25rem .7rem;border-radius:999px;background:var(--gold);color:var(--navy-ink);font-size:.75rem;font-weight:700;letter-spacing:.02em}
-.explain__aka{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
-.explain__card h4{margin:.2rem 0 .5rem;font-family:var(--font-display);font-weight:600;font-size:1.45rem;color:var(--navy)}
-.explain__what{color:var(--ink-soft);font-size:.97rem;margin-bottom:1rem}
-.explain__card dl{margin:0;display:grid;gap:.6rem;padding-top:.9rem;border-top:1px solid var(--line)}
-.explain__card dt{font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint)}
-.explain__card dd{margin:.1rem 0 0;font-weight:600;color:var(--ink)}
-.explain__card.is-featured dd{color:var(--navy)}
-.explain__note{margin-top:1.4rem;color:var(--ink-soft)}
-.explain__note a{color:var(--navy);font-weight:700}
-
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
 }
-
-@media (min-width:900px){.life__intro{grid-template-columns:1fr 1fr}}
-/* Connector lines: a stem from the condition down to a rail that feeds each card. */
-@media (min-width:860px){
-}
-@media (min-width:700px){.life__factors{grid-template-columns:auto 1fr 1fr;align-items:center}}
-@media (prefers-reduced-motion:reduce){.life__photo img,.life__swap p{transition:none}}
-@media (max-width:859px){
-}
-
 
 /* ---------------- Appointment photos ---------------- */
 .steps__visual{display:none}

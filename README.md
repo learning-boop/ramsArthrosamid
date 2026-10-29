@@ -41,7 +41,6 @@ Deploy the contents of `dist/` to any static host (cPanel public_html, Netlify, 
 - Intro: navy curtain with the wordmark lifts to reveal the hero. Gold reading-progress line along the top.
 - Hero: background film with scroll parallax (the video sinks and zooms while the copy lifts away), pause/play button, film grain, magnetic and shining CTAs, glass card with an animated 4-year ring.
 - Photos: clip-path wipe reveals and parallax drift (`ParallaxImage.jsx`).
-- “New to Arthrosamid®?” (`Explainer.jsx`): plain-English facts and a comparison with steroid and lubricating-gel injections.
 - Previously: brand wipe-and-shimmer, word-by-word headline, drifting colour fields, rising motes, the knee that draws itself,
   calms and fills with hydrogel, pointer tilt on desktop, pulsing CTA ring, trust ticker.
 - Page: scroll reveals, count-up stats, scroll-linked progress line through the appointment steps, aftercare timeline fill,

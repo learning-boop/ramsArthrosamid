@@ -7,21 +7,6 @@ export const NAV = [
   { href: '#clinics', label: 'Clinics' },
 ];
 
-// "New to Arthrosamid®?": the injection in everyday words, and how it compares with injections people know.
-export const EXPLAINER_FACTS = [
-  { icon: 'water', title: 'A soft, water-based gel', body: '97.5% water. Soft, not a hard implant.' },
-  { icon: 'cushion', title: 'Works like a cushion', body: 'It joins your knee’s lining as a soft, cushioning layer.' },
-  { icon: 'one', title: 'Just one injection', body: 'Given once. No course, no top-ups.' },
-  { icon: 'clock', title: 'Designed to last', body: 'Not broken down, so relief is reported for up to 5 years.' },
-];
-
-// Figures match the clinic's own comparison: typical ranges, and every knee responds differently.
-export const KNOWN_INJECTIONS = [
-  { aka: 'Cortisone', name: 'Steroid injection', what: 'A strong anti-inflammatory that quickly calms a flare-up.', often: 'Usually up to 3 or 4 a year', lasts: 'A few weeks to around 3 months' },
-  { aka: 'Hyaluronic acid', name: 'Lubricating gel injection', what: 'Tops up the knee’s natural lubricating fluid.', often: 'Often a course, repeated', lasts: 'Several months' },
-  { aka: 'Polyacrylamide hydrogel', name: 'Arthrosamid®', what: 'Becomes part of the knee lining as a lasting cushion.', often: 'One injection', lasts: 'Reported for up to 5 years', featured: true },
-];
-
 export const STAGES = [
   {
     title: 'A soft gel, placed precisely',
