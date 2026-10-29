@@ -8,7 +8,7 @@ import { CLINICS } from '../data/content.js';
 import { CLINIC, BRAND, PRICE, BOOKING } from '../config.js';
 
 const OPTIONS = [
-  { value: 'treatment', label: `Full Arthrosamid® treatment (${PRICE.perKnee} per knee, all-inclusive)` },
+  { value: 'treatment', label: `Full Arthrosamid® hydrogel treatment (${PRICE.perKnee} per knee, all-inclusive)` },
   { value: 'consultation', label: `Consultation and ultrasound scan only (${PRICE.consultationAndScan})` },
   { value: 'other', label: 'Another injection (hyaluronic acid, PRP or steroid)' },
   { value: 'unsure', label: 'Not sure yet, I’d like advice' },
@@ -67,7 +67,7 @@ export default function BookPage() {
           subject: `Arthrosamid® consultation request – ${clinic.name}`,
           from_name: `${BRAND.name} website`,
           email: form.email.trim() || undefined, // reply-to: replying goes straight to the patient
-          Treatment: 'Arthrosamid® knee injection',
+          Treatment: 'Arthrosamid® hydrogel knee injection',
           Clinic: `${clinic.name} – ${clinic.address}`,
           'Interested in': option,
           Knee: form.knee,

@@ -46,12 +46,10 @@ export const STATS = [
 // Everything the £2,300 per-knee price covers (shown on the Price card).
 export const INCLUSIONS = [
   'Consultation with Ram',
-  'Diagnostic ultrasound scan of the knee',
-  'Joint fluid drained, where needed',
-  'Single dose of antibiotics',
-  'Local anaesthetic',
-  'Ultrasound-guided Arthrosamid® injection (6 ml)',
-  'Written aftercare and a direct contact number',
+  'Ultrasound scan of the knee',
+  'Antibiotics',
+  'Joint aspiration (excess fluid drained, where needed)',
+  'Ultrasound-guided Arthrosamid® hydrogel injection',
 ];
 
 // "Also available": other ultrasound-guided injections Ram offers. Plain words, no promises.
@@ -137,6 +135,7 @@ export const FAQS = [
   { q: 'How long does the appointment take?', a: 'Allow around 2 to 3 hours. That includes the consultation and scan, a 60–90 minute wait after your antibiotics, the injection and a short rest. The injection itself takes a few seconds.' },
   { q: 'When will I notice a difference?', a: 'It isn’t an instant painkiller. Most people notice improvement over days to weeks, building as the gel settles in. A mild flare in the first week is common.' },
   { q: 'What should I expect afterwards?', a: 'Some swelling, tightness or heaviness in the first week is normal while the knee settles. Improvement usually builds over two to six weeks, and we review how you’re moving at three to twelve months.' },
+  { q: 'Is Arthrosamid® a hydrogel injection?', a: 'Yes. Arthrosamid® is a polyacrylamide hydrogel, a soft gel that is 97.5% water. You may also see it called a hydrogel knee injection or a knee gel injection. Unlike other gel injections, it isn’t broken down by the body.' },
   { q: 'How long does it last?', a: 'Arthrosamid® isn’t absorbed like steroid or hyaluronic acid injections. Clinical follow-up reports sustained pain relief up to five years after a single injection, though every knee responds differently.' },
   { q: 'What are the side effects?', a: 'Usually temporary pain, swelling or a feeling of tightness that settles within days to a few weeks. Infection is rare, which is why you have antibiotics on the day.' },
   { q: 'Can I have both knees treated?', a: 'Yes. Each knee is treated separately, and we’ll advise whether to do both on the same day or stage them.' },

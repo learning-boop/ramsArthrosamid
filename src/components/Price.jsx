@@ -18,7 +18,7 @@ export default function Price() {
         <div className="price__cards">
           <Reveal className="price__card price__card--main">
             <span className="price__badge">Full treatment</span>
-            <p className="price__name">Ultrasound-guided Arthrosamid® injection</p>
+            <p className="price__name">Ultrasound-guided Arthrosamid® hydrogel injection</p>
             <p className="price__amount"><b>{PRICE.perKnee}</b><span>per knee, all-inclusive</span></p>
             <ul className="price__inc">
               {INCLUSIONS.map((item) => <li key={item}><Check />{item}</li>)}

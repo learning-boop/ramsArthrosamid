@@ -12,7 +12,7 @@ export default function How() {
         <div className="how__intro">
           <div>
             <Reveal as="p" className="kicker">How it works</Reveal>
-            <Reveal as="h2" className="h2" id="howTitle">What Arthrosamid® does inside the knee</Reveal>
+            <Reveal as="h2" className="h2" id="howTitle">What Arthrosamid® hydrogel does inside the knee</Reveal>
             <Reveal as="p" className="lead">
               A soft hydrogel that becomes part of the knee’s lining, cushioning the joint and calming the irritation behind the pain.
             </Reveal>
