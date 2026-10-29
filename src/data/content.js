@@ -9,10 +9,10 @@ export const NAV = [
 
 // "New to Arthrosamid®?": the injection in everyday words, and how it compares with injections people know.
 export const EXPLAINER_FACTS = [
-  { icon: 'water', title: 'A soft, water-based gel', body: '97.5% water and 2.5% polyacrylamide, a gel-forming material. It feels nothing like a hard implant.' },
-  { icon: 'cushion', title: 'Works like a cushion', body: 'It joins the soft lining inside your knee, forming a cushioning layer that eases pain, stiffness and swelling.' },
-  { icon: 'one', title: 'Just one injection', body: 'Given once, guided by ultrasound. No course of injections and no planned top-ups.' },
-  { icon: 'clock', title: 'Designed to last', body: 'Your body doesn’t break it down, so pain relief has been reported for up to 5 years.' },
+  { icon: 'water', title: 'A soft, water-based gel', body: '97.5% water. Soft, not a hard implant.' },
+  { icon: 'cushion', title: 'Works like a cushion', body: 'It joins your knee’s lining as a soft, cushioning layer.' },
+  { icon: 'one', title: 'Just one injection', body: 'Given once. No course, no top-ups.' },
+  { icon: 'clock', title: 'Designed to last', body: 'Not broken down, so relief is reported for up to 5 years.' },
 ];
 
 // Figures match the clinic's own comparison: typical ranges, and every knee responds differently.

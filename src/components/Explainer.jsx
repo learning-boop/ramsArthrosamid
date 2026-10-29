@@ -46,7 +46,7 @@ export default function Explainer() {
             <Reveal as="h2" className="h2" id="explainTitle">A knee injection that works like a cushion.</Reveal>
           </div>
           <Reveal as="p" className="lead measure">
-            You may have had a steroid injection, or heard of “lubricating gel” jabs. Arthrosamid® is a soft gel injected into the knee too, but it’s designed to stay there and keep cushioning the joint.
+            You may know steroid or “lubricating gel” jabs. Arthrosamid® is a soft gel too, but it’s designed to stay in the knee and keep cushioning it.
           </Reveal>
         </div>
 
@@ -75,6 +75,7 @@ export default function Explainer() {
             </Reveal>
           ))}
         </div>
+        <p className="explain__hint" aria-hidden="true">Swipe to compare →</p>
         <Reveal as="p" className="explain__note">
           Everyone’s knee is different. Ram will explain which option suits yours at your consultation. <a href="#clinician">Meet Ram</a>
         </Reveal>
