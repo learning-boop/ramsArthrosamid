@@ -31,7 +31,7 @@ export default function Price() {
             <p className="price__name">Consultation and ultrasound scan only</p>
             <p className="price__amount"><b>{PRICE.consultationAndScan}</b><span>consultation only</span></p>
             <p className="price__alt-text">A full assessment and a live ultrasound scan of your knee, with an honest answer on whether Arthrosamid® is right for you. Then decide in your own time.</p>
-            <a className="btn btn--glass" href={CLINIC.bookingUrl}>Book a consultation only</a>
+            <a className="btn btn--glass" href={`${CLINIC.bookingUrl}?option=consultation`}>Book a consultation only</a>
           </Reveal>
         </div>
         <Reveal as="p" className="price__fine">Each knee is priced separately. Suitability is confirmed at consultation; Arthrosamid® is not suitable for everyone and results vary.</Reveal>

@@ -5,7 +5,9 @@ import { Menu, CloseIcon } from './Icons.jsx';
 import Logo from './Logo.jsx';
 import { OpenStatus } from './OpeningHours.jsx';
 
-export default function Header() {
+/** `onHome={false}` (booking page): section links point back to the home page and the bar is always solid. */
+export default function Header({ onHome = true }) {
+  const link = (href) => (onHome ? href : `./${href}`);
   const [stuck, setStuck] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState('');
@@ -14,7 +16,7 @@ export default function Header() {
     const sections = NAV.filter((n) => n.href.startsWith('#') && n.href !== '#home').map((n) => document.querySelector(n.href)).filter(Boolean);
     let ticking = false;
     const update = () => {
-      setStuck(window.scrollY > 60);
+      setStuck(!onHome || window.scrollY > 60);
       const y = window.innerHeight * 0.4;
       const hero = document.querySelector('.hero');
       let current = hero && hero.getBoundingClientRect().bottom > y ? '#home' : '';
@@ -50,13 +52,13 @@ export default function Header() {
 
       <header className={`header${stuck ? ' is-stuck' : ''}${open ? ' is-open' : ''}`} id="top">
         <div className="wrap">
-          <a className="brand" href="#home" aria-label={`${BRAND.name} home`}>
+          <a className="brand" href={link('#home')} aria-label={`${BRAND.name} home`}>
             <Logo tone="auto" />
           </a>
 
           <nav className="nav" aria-label="Page sections">
             {NAV.map((n) => (
-              <a key={n.href} href={n.href} className={active === n.href ? 'is-active' : undefined}>{n.label}</a>
+              <a key={n.href} href={link(n.href)} className={active === n.href ? 'is-active' : undefined}>{n.label}</a>
             ))}
             <a className="btn btn--primary" href={CLINIC.bookingUrl}>Book a consultation</a>
           </nav>
@@ -76,7 +78,7 @@ export default function Header() {
         <div className={`mobile-nav${open ? ' is-open' : ''}`} id="mobileNav">
           <div className="wrap">
             {NAV.map((n) => (
-              <a key={n.href} href={n.href} onClick={() => setOpen(false)}>{n.label}</a>
+              <a key={n.href} href={link(n.href)} onClick={() => setOpen(false)}>{n.label}</a>
             ))}
             <a href={CLINIC.bookingUrl} onClick={() => setOpen(false)}>Book a consultation</a>
           </div>

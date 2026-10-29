@@ -7,14 +7,25 @@ export const CLINIC = {
   email: 'info@jointcareclinics.co.uk',
   postalAddress: '78 Clifton Road, Rugby, Warwickshire, CV21 3QT',
   website: 'https://jointcareclinics.co.uk',
-  // Every "Book a consultation" button goes here.
-  bookingUrl: 'https://jointcareclinics.co.uk/contact/',
+  // Every "Book a consultation" button goes to the booking page.
+  bookingUrl: './book.html',
 };
 
 // Public brand shown in the logo, page title and copyright. Joint Care Clinics (CLINIC above)
 // stays the business named on contact details, since it handles enquiries and appointments.
 export const BRAND = {
   name: 'Knee Care Clinics',
+};
+
+// Booking form delivery. Requests are emailed through FormSubmit (formsubmit.co, free, no account):
+// each inbox must click the one-time "Activate Form" email FormSubmit sends after its first request.
+// `inbox` on each clinic in content.js picks the address below.
+export const BOOKING = {
+  inboxes: {
+    jointcare: 'info@jointcareclinics.co.uk',
+    northeast: 'info@jointcarenortheast.co.uk',
+  },
+  endpoint: (email) => `https://formsubmit.co/ajax/${email}`,
 };
 
 export const PRICE = {

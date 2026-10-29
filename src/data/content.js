@@ -138,12 +138,12 @@ export const FAQS = [
 
 // Joint Care Clinics locations where Ram sees patients (from jointcareclinics.co.uk/contact).
 export const CLINICS = [
-  { name: 'Birmingham & Solihull', address: '265B Alcester Road South, King’s Heath, Birmingham B14 6DT' },
-  { name: 'Leicester', address: 'No 1, Holmfield Court, Holmfield Road, Leicester LE2 1SD' },
-  { name: 'Rugby', address: '78 Clifton Road, Rugby, Warwickshire CV21 3QT' },
-  { name: 'Milton Keynes', address: 'ISIS Chiropractic, ISIS House, Tilers Road, Kiln Farm, Milton Keynes MK11 3EA' },
+  { slug: 'birmingham', inbox: 'jointcare', name: 'Birmingham & Solihull', address: '265B Alcester Road South, King’s Heath, Birmingham B14 6DT' },
+  { slug: 'leicester', inbox: 'jointcare', name: 'Leicester', address: 'No 1, Holmfield Court, Holmfield Road, Leicester LE2 1SD' },
+  { slug: 'rugby', inbox: 'jointcare', name: 'Rugby', address: '78 Clifton Road, Rugby, Warwickshire CV21 3QT' },
+  { slug: 'milton-keynes', inbox: 'jointcare', name: 'Milton Keynes', address: 'ISIS Chiropractic, ISIS House, Tilers Road, Kiln Farm, Milton Keynes MK11 3EA' },
   // From jointcarenortheast.co.uk. The map search uses the host clinic's name, which is what Google Maps lists.
-  { name: 'Newcastle', operator: 'Joint Care North East', address: 'Dr Matla Clinic, Old Brewery Court, Starbeck Avenue, Jesmond, Newcastle upon Tyne NE2 1XG', mapsQuery: 'Dr Matla Clinic, Old Brewery Court, Starbeck Avenue, Jesmond, Newcastle upon Tyne NE2 1XG' },
+  { slug: 'newcastle', inbox: 'northeast', name: 'Newcastle', operator: 'Joint Care North East', address: 'Dr Matla Clinic, Old Brewery Court, Starbeck Avenue, Jesmond, Newcastle upon Tyne NE2 1XG', mapsQuery: 'Dr Matla Clinic, Old Brewery Court, Starbeck Avenue, Jesmond, Newcastle upon Tyne NE2 1XG' },
 ];
 
 // Trust band under the hero. Every item is a fact stated elsewhere on the page.

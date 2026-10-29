@@ -26,13 +26,16 @@ export default function Clinics() {
               <h3>{c.name}</h3>
               {c.operator && <p className="clinic-card__operator">{c.operator}</p>}
               <address>{c.address}</address>
-              <a href={mapsUrl(c)} target="_blank" rel="noopener noreferrer">Get directions</a>
+              <div className="clinic-card__actions">
+                <a className="btn btn--primary clinic-card__book" href={`${CLINIC.bookingUrl}?clinic=${c.slug}`} aria-label={`Book a consultation at ${c.name}`}>Book now</a>
+                <a href={mapsUrl(c)} target="_blank" rel="noopener noreferrer">Get directions</a>
+              </div>
             </Reveal>
           ))}
         </ul>
 
         <Reveal className="clinics-sec__cta">
-          <a className="btn btn--primary" href={CLINIC.bookingUrl}>Contact {CLINIC.name}</a>
+          <a className="btn btn--primary" href={CLINIC.bookingUrl}>Book a consultation</a>
           <a className="btn btn--ghost" href={CLINIC.phoneHref}><Phone /> {CLINIC.phoneDisplay}</a>
           <a className="clinics-sec__mail" href={`mailto:${CLINIC.email}`}>{CLINIC.email}</a>
         </Reveal>

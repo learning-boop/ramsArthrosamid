@@ -2,12 +2,12 @@ import { CLINIC, BRAND } from '../config.js';
 import Logo from './Logo.jsx';
 import OpeningHours from './OpeningHours.jsx';
 
-export default function Footer() {
+export default function Footer({ onHome = true }) {
   return (
     <footer className="footer">
       <div className="wrap">
         <div className="footer__brand">
-          <a className="brand" href="#home" aria-label={`${BRAND.name} home`}>
+          <a className="brand" href={onHome ? '#home' : './'} aria-label={`${BRAND.name} home`}>
             <Logo tone="white" />
           </a>
           <p className="footer__blurb">Private musculoskeletal ultrasound scans and ultrasound-guided injections across Warwickshire, the West Midlands, Buckinghamshire, Leicestershire and the North East.</p>
