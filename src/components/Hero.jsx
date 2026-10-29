@@ -125,7 +125,7 @@ export default function Hero() {
           </h1>
 
           <motion.p className="hero__sub lead" {...fade(1.2)}>
-            One ultrasound-guided injection for knee osteoarthritis, given personally by {CLINICIAN.name}, an accredited Arthrosamid® provider. No surgery, home the same day.
+            One ultrasound-guided injection for <mark className="hero__hl">knee osteoarthritis</mark>, given personally by {CLINICIAN.name}, an accredited Arthrosamid® provider. No surgery, home the same day.
           </motion.p>
 
           <motion.div className="hero__cta" {...fade(1.35)}>
@@ -135,7 +135,7 @@ export default function Hero() {
 
           <motion.dl className="hero__stats" {...fade(1.5)}>
             <div><dt>1</dt><dd>appointment</dd></div>
-            <div><dt>4<small>yrs</small></dt><dd>relief reported</dd></div>
+            <div><dt>5<small>yrs</small></dt><dd>relief reported</dd></div>
             <div><dt>{PRICE.perKnee}</dt><dd>per knee, all-in</dd></div>
           </motion.dl>
         </div>
@@ -147,7 +147,7 @@ export default function Hero() {
           : <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5v14l12-7Z" /></svg>}
       </button>
 
-      <motion.a className="scroll-cue" href="#life" aria-label="Scroll to read more" {...fade(2)}>
+      <motion.a className="scroll-cue" href="#about" aria-label="Scroll to read more" {...fade(2)}>
         <span>Scroll</span><ChevronDown />
       </motion.a>
     </section>

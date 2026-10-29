@@ -7,47 +7,19 @@ export const NAV = [
   { href: '#clinics', label: 'Clinics' },
 ];
 
-// "Your whole life": how knee osteoarthritis spreads from the joint to the day to the people around you,
-// laid out like the WHO's ICF model (health condition → body → activity → participation, shaped by
-// your surroundings and by you). `pain`/`img` and `relief`/`reliefImg` are shown with a toggle.
-// Photos: Pexels licence (free commercial use); captions describe activities, never present people as patients.
-export const LIFE_LEVELS = [
-  {
-    key: 'body',
-    label: 'Your knee',
-    pain: 'Pain, stiffness and swelling. Hard first steps every morning, and a knee that won’t bend like it used to.',
-    relief: 'A cushioning gel layer in the joint lining, designed to ease pain, stiffness and swelling for years.',
-    img: './media/feel-stairs.jpg',
-    alt: 'An older man slowly climbing a long flight of outdoor steps',
-    reliefImg: './media/life-cycle.jpg',
-    reliefAlt: 'An older man in a helmet cycling towards the camera along a country lane',
-  },
-  {
-    key: 'activity',
-    label: 'Your day',
-    pain: 'Stairs, kneeling, long walks, lifting shopping or carrying the children all become a struggle.',
-    relief: 'Take the stairs, walk further, and pick up the children or grandchildren again.',
-    img: './media/day-struggle.jpg',
-    alt: 'An older man stopped on a beach walk, bent over and holding his knee',
-    reliefImg: './media/life-grandchild.jpg',
-    reliefAlt: 'A grandfather laughing as he carries his grandchild on his shoulders',
-  },
-  {
-    key: 'life',
-    label: 'Your life',
-    pain: 'Time off work, missed days out, and feeling left on the sidelines by the people you love.',
-    relief: 'Back to work, back to family days, and back to sharing the moments that matter.',
-    img: './media/life-alone.jpg',
-    alt: 'An older man sitting alone on a bench, looking out over the water',
-    reliefImg: './media/life-couple.jpg',
-    reliefAlt: 'A smiling older couple walking their small dog along a woodland path',
-  },
+// "New to Arthrosamid®?": the injection in everyday words, and how it compares with injections people know.
+export const EXPLAINER_FACTS = [
+  { icon: 'water', title: 'A soft, water-based gel', body: '97.5% water and 2.5% polyacrylamide, a gel-forming material. It feels nothing like a hard implant.' },
+  { icon: 'cushion', title: 'Works like a cushion', body: 'It joins the soft lining inside your knee, forming a cushioning layer that eases pain, stiffness and swelling.' },
+  { icon: 'one', title: 'Just one injection', body: 'Given once, guided by ultrasound. No course of injections and no planned top-ups.' },
+  { icon: 'clock', title: 'Designed to last', body: 'Your body doesn’t break it down, so pain relief has been reported for up to 5 years.' },
 ];
 
-// The two things that shape every plan. Ram asks about both at the consultation.
-export const LIFE_FACTORS = [
-  { label: 'Your surroundings', body: 'A physical job, stairs at home, caring for children or parents.' },
-  { label: 'You', body: 'Your age, fitness, goals, and how you feel about surgery.' },
+// Figures match the clinic's own comparison: typical ranges, and every knee responds differently.
+export const KNOWN_INJECTIONS = [
+  { aka: 'Cortisone', name: 'Steroid injection', what: 'A strong anti-inflammatory that quickly calms a flare-up.', often: 'Usually up to 3 or 4 a year', lasts: 'A few weeks to around 3 months' },
+  { aka: 'Hyaluronic acid', name: 'Lubricating gel injection', what: 'Tops up the knee’s natural lubricating fluid.', often: 'Often a course, repeated', lasts: 'Several months' },
+  { aka: 'Polyacrylamide hydrogel', name: 'Arthrosamid®', what: 'Becomes part of the knee lining as a lasting cushion.', often: 'One injection', lasts: 'Reported for up to 5 years', featured: true },
 ];
 
 export const STAGES = [
@@ -63,14 +35,14 @@ export const STAGES = [
   },
   {
     title: 'And it stays',
-    body: 'Unlike cortisone or hyaluronic acid, it isn’t absorbed. Pain relief has been reported four years after one injection.',
+    body: 'Unlike cortisone or hyaluronic acid, it isn’t absorbed. Pain relief has been reported for up to five years after one injection.',
     icon: 'clock',
   },
 ];
 
 export const STATS = [
   { value: 1, prefix: '', suffix: '', label: 'injection. No course to complete, no top-ups scheduled.' },
-  { value: 4, prefix: 'up to ', suffix: ' yrs', label: 'of pain relief reported in clinical follow-up after a single treatment.' },
+  { value: 5, prefix: 'up to ', suffix: ' yrs', label: 'of pain relief reported in clinical follow-up after a single treatment.' },
   { value: 30000, prefix: '', suffix: '+', label: 'ultrasound-guided injections carried out by our lead clinician.', comma: true },
   { value: 20, prefix: '', suffix: '+ yrs', label: 'of NHS musculoskeletal experience behind every appointment.' },
 ];
@@ -143,7 +115,7 @@ export const FAQS = [
   { q: 'How long does the appointment take?', a: 'Around 60 minutes for the consultation, scan, injection and a short rest. The injection itself takes a few seconds.' },
   { q: 'When will I notice a difference?', a: 'It isn’t an instant painkiller. Most people notice improvement over days to weeks, building as the gel settles in. A mild flare in the first week is common.' },
   { q: 'What should I expect afterwards?', a: 'Some swelling, tightness or heaviness in the first week is normal while the knee settles. Improvement usually builds over two to six weeks, and we review how you’re moving at three to twelve months.' },
-  { q: 'How long does it last?', a: 'Arthrosamid® isn’t absorbed like steroid or hyaluronic acid injections. Clinical follow-up reports sustained pain relief four years after a single injection, though every knee responds differently.' },
+  { q: 'How long does it last?', a: 'Arthrosamid® isn’t absorbed like steroid or hyaluronic acid injections. Clinical follow-up reports sustained pain relief up to five years after a single injection, though every knee responds differently.' },
   { q: 'What are the side effects?', a: 'Usually temporary pain, swelling or a feeling of tightness that settles within days to a few weeks. Infection is rare, which is why you have antibiotics on the day.' },
   { q: 'Can I have both knees treated?', a: 'Yes. Each knee is treated separately, and we’ll advise whether to do both on the same day or stage them.' },
   { q: 'Can I drive home afterwards?', a: 'No. Please bring someone or arrange transport. Most motor insurance won’t cover you for a few hours after a local anaesthetic.' },

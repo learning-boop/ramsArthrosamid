@@ -1,4 +1,4 @@
-import { CLINIC } from '../config.js';
+import { CLINIC, BRAND } from '../config.js';
 import Logo from './Logo.jsx';
 import OpeningHours from './OpeningHours.jsx';
 
@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="wrap">
         <div className="footer__brand">
-          <a className="brand" href="#home" aria-label="Arthrosamid® home">
+          <a className="brand" href="#home" aria-label={`${BRAND.name} home`}>
             <Logo tone="white" />
           </a>
           <p className="footer__blurb">Private musculoskeletal ultrasound scans and ultrasound-guided injections across Warwickshire, the West Midlands, Buckinghamshire and Leicestershire.</p>
@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
         <div className="footer__legal">
           <p>Arthrosamid® is a registered trademark of Contura. This page is for information and does not replace a consultation. Arthrosamid® is not suitable for everyone; suitability is confirmed by a clinician after assessment and, where appropriate, ultrasound scan. Individual results vary.</p>
-          <p>© {new Date().getFullYear()} {CLINIC.name} · <a href={`${CLINIC.website}/privacy-policy/`}>Privacy policy</a> · <a href={`${CLINIC.website}/privacy-policy/`}>Cookie policy</a></p>
+          <p>© {new Date().getFullYear()} {BRAND.name} · <a href={`${CLINIC.website}/privacy-policy/`}>Privacy policy</a> · <a href={`${CLINIC.website}/privacy-policy/`}>Cookie policy</a></p>
         </div>
       </div>
     </footer>

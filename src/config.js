@@ -11,6 +11,12 @@ export const CLINIC = {
   bookingUrl: 'https://jointcareclinics.co.uk/contact/',
 };
 
+// Public brand shown in the logo, page title and copyright. Joint Care Clinics (CLINIC above)
+// stays the business named on contact details, since it handles enquiries and appointments.
+export const BRAND = {
+  name: 'Knee Care Clinics',
+};
+
 export const PRICE = {
   perKnee: '£2,300',
   consultationAndScan: '£150',

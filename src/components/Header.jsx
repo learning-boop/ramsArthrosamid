@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { NAV } from '../data/content.js';
-import { CLINIC } from '../config.js';
+import { CLINIC, BRAND } from '../config.js';
 import { Menu, CloseIcon } from './Icons.jsx';
 import Logo from './Logo.jsx';
 import { OpenStatus } from './OpeningHours.jsx';
@@ -50,7 +50,7 @@ export default function Header() {
 
       <header className={`header${stuck ? ' is-stuck' : ''}${open ? ' is-open' : ''}`} id="top">
         <div className="wrap">
-          <a className="brand" href="#home" aria-label="Arthrosamid® home">
+          <a className="brand" href="#home" aria-label={`${BRAND.name} home`}>
             <Logo tone="auto" />
           </a>
 

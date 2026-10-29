@@ -40,7 +40,8 @@ Deploy the contents of `dist/` to any static host (cPanel public_html, Netlify, 
 
 - Intro: navy curtain with the wordmark lifts to reveal the hero. Gold reading-progress line along the top.
 - Hero: background film with scroll parallax (the video sinks and zooms while the copy lifts away), pause/play button, film grain, magnetic and shining CTAs, glass card with an animated 4-year ring.
-- Photos: clip-path wipe reveals and parallax drift (`ParallaxImage.jsx`); “Life, back” gallery with columns drifting at different speeds under an outlined marquee line.
+- Photos: clip-path wipe reveals and parallax drift (`ParallaxImage.jsx`).
+- “New to Arthrosamid®?” (`Explainer.jsx`): plain-English facts and a comparison with steroid and lubricating-gel injections.
 - Previously: brand wipe-and-shimmer, word-by-word headline, drifting colour fields, rising motes, the knee that draws itself,
   calms and fills with hydrogel, pointer tilt on desktop, pulsing CTA ring, trust ticker.
 - Page: scroll reveals, count-up stats, scroll-linked progress line through the appointment steps, aftercare timeline fill,
@@ -50,4 +51,4 @@ Deploy the contents of `dist/` to any static host (cPanel public_html, Netlify, 
 ## Media credits
 
 - Hero film: “Grandfather and grandson walking in forest”, [Pexels](https://www.pexels.com/video/grandfather-and-grandson-walking-in-forest-10431051/), [Pexels licence](https://www.pexels.com/license/) (free commercial use; don’t present the people as patients). Mirrored, trimmed to a 15 s seamless loop, full HD `hero.mp4` (1920×1012, ~7.3 MB) and a phone crop `hero-mobile.mp4` (720×942, ~3.4 MB).
-- Photos: [Unsplash](https://unsplash.com/license) licence (knee exam, ultrasound, beach couple behind the consultation card); “Life, back” gallery photos from Pexels ([grandchild](https://www.pexels.com/photo/30351504/), [cycling](https://www.pexels.com/photo/36756427/), [couple walking](https://www.pexels.com/photo/16540278/)); “You know the feeling” stairs photo from [Pexels](https://www.pexels.com/photo/39040862/) ([Pexels licence](https://www.pexels.com/license/)).
+- Photos: [Unsplash](https://unsplash.com/license) licence (knee exam, ultrasound, beach couple).
