@@ -115,9 +115,8 @@ export const CLINICIAN = {
   ],
   // Large photo mode (replaces the credentials card). Empty = show the credentials card.
   photo: '',
-  // Small round photo inside the credentials card's ring (in place of the initials).
-  // Cropped from a clinic photo; a front-facing headshot would suit this circle better.
-  avatar: './media/ram-avatar.jpg',
+  // Optional small round photo inside the credentials card's ring (instead of the initials).
+  avatar: '',
 };
 
 export const FEATURED_REVIEW = {
