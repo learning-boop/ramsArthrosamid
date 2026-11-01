@@ -6,7 +6,7 @@ import { CLINIC, PRICE, HERO_VIDEO } from '../config.js';
 import { CLINICIAN } from '../data/content.js';
 
 const EASE = [0.2, 0.7, 0.2, 1];
-const HEADLINE_WORDS = 'Speak With Our Licensed Team About Knee Osteoarthritis'.split(' ');
+const HEADLINE_WORDS = 'Speak With Our Registered Team About Knee Osteoarthritis'.split(' ');
 // The last two words ("Knee Osteoarthritis") sit inside the gold highlight.
 const HIGHLIGHT_FROM = HEADLINE_WORDS.length - 2;
 // Copy starts once the intro curtain has lifted.
@@ -139,7 +139,7 @@ export default function Hero() {
           </h1>
 
           <motion.p className="hero__sub lead" {...fade(0.9)}>
-            Explore whether a single, ultrasound-guided Arthrosamid® hydrogel injection with {CLINICIAN.name}, {CLINICIAN.statutoryTitle}, is appropriate for your knee. Walk-in, same-day care without surgery.
+            Explore whether a single, ultrasound-guided Arthrosamid® hydrogel injection with {CLINICIAN.name}, {CLINICIAN.statutoryTitle}, is appropriate for your knee. Same-day consultation and treatment, without surgery.
           </motion.p>
 
           <motion.div className="hero__cta" {...fade(1.35)}>
