@@ -92,6 +92,8 @@ export const STEPS = [
 export const CLINICIAN = {
   name: 'Ram Rachaputi',
   fullName: 'RamaKrishna Rachaputi',
+  // Protected title as registered with the HCPC (used in the hero).
+  statutoryTitle: 'HCPC-registered Consultant Physiotherapist',
   letters: 'BPT, PG Dip, PG Cert, MCSP, MSOR',
   intro: 'Ram is an HCPC-registered consultant physiotherapist, musculoskeletal sonographer and independent prescriber, with more than 25 years of NHS musculoskeletal experience and over 30,000 ultrasound-guided injections behind him.',
   quals: [

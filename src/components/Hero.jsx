@@ -6,7 +6,9 @@ import { CLINIC, PRICE, HERO_VIDEO } from '../config.js';
 import { CLINICIAN } from '../data/content.js';
 
 const EASE = [0.2, 0.7, 0.2, 1];
-const HEADLINE = 'Stop planning your day around your knee.';
+const HEADLINE_WORDS = 'Speak With Our Licensed Team About Knee Osteoarthritis'.split(' ');
+// The last two words ("Knee Osteoarthritis") sit inside the gold highlight.
+const HIGHLIGHT_FROM = HEADLINE_WORDS.length - 2;
 // Copy starts once the intro curtain has lifted.
 const T0 = 0.9;
 
@@ -97,35 +99,47 @@ export default function Hero() {
 
       <motion.div className="wrap hero__inner" style={reduce ? undefined : { y: copyY, opacity: copyOpacity }}>
         <div className="hero__copy">
-          <h1 className="hero__title" id="heroTitle">
-            <motion.span
-              className="hero__brand"
-              initial={reduce ? false : { clipPath: 'inset(0 100% -10% 0)', filter: 'blur(10px)' }}
-              animate={reduce ? {} : { clipPath: 'inset(0 0% -10% 0)', filter: 'blur(0px)' }}
-              transition={{ duration: 1.4, ease: EASE, delay: T0 + 0.1 }}
-            >
-              Arthrosamid<sup>®</sup>
-            </motion.span>
-            <span className="hero__headline">
-              {HEADLINE.split(' ').map((word, i) => (
+          <h1 className="hero__title hero__h1" id="heroTitle">
+            {HEADLINE_WORDS.map((word, i) => {
+              const w = (
                 <span key={i}>
                   <span className="word">
                     <motion.span
-                      initial={reduce ? false : { y: '110%', rotate: 4 }}
+                      initial={reduce ? false : { y: '110%', rotate: 3 }}
                       animate={reduce ? {} : { y: 0, rotate: 0 }}
-                      transition={{ duration: 0.9, ease: EASE, delay: T0 + 0.7 + i * 0.07 }}
+                      transition={{ duration: 0.9, ease: EASE, delay: T0 + 0.15 + i * 0.07 }}
                     >
                       {word}
                     </motion.span>
                   </span>
-                  {' '}
+                  {i < HEADLINE_WORDS.length - 1 ? ' ' : ''}
                 </span>
-              ))}
-            </span>
+              );
+              return i < HIGHLIGHT_FROM ? w : null;
+            })}
+            <mark className="hero__hl">
+              {HEADLINE_WORDS.slice(HIGHLIGHT_FROM).map((word, j) => {
+                const i = HIGHLIGHT_FROM + j;
+                return (
+                  <span key={i}>
+                    <span className="word">
+                      <motion.span
+                        initial={reduce ? false : { y: '110%', rotate: 3 }}
+                        animate={reduce ? {} : { y: 0, rotate: 0 }}
+                        transition={{ duration: 0.9, ease: EASE, delay: T0 + 0.15 + i * 0.07 }}
+                      >
+                        {word}
+                      </motion.span>
+                    </span>
+                    {i < HEADLINE_WORDS.length - 1 ? ' ' : ''}
+                  </span>
+                );
+              })}
+            </mark>
           </h1>
 
-          <motion.p className="hero__sub lead" {...fade(1.2)}>
-            One ultrasound-guided Arthrosamid® hydrogel injection for <mark className="hero__hl">knee osteoarthritis</mark>, given personally by {CLINICIAN.name}, an accredited provider. No surgery, home the same day.
+          <motion.p className="hero__sub lead" {...fade(0.9)}>
+            Explore whether a single, ultrasound-guided Arthrosamid® hydrogel injection with {CLINICIAN.name}, {CLINICIAN.statutoryTitle}, is appropriate for your knee. Walk-in, same-day care without surgery.
           </motion.p>
 
           <motion.div className="hero__cta" {...fade(1.35)}>
