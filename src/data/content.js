@@ -62,8 +62,8 @@ export const OTHER_INJECTIONS = [
 export const STEPS = [
   {
     title: 'Consultation and ultrasound scan',
-    img: './media/knee-exam.jpg',
-    alt: 'A clinician examining a patient’s knee on a treatment couch',
+    img: './media/ram-knee-scan.jpg',
+    alt: 'Ram Rachaputi scanning a patient’s knee with ultrasound in the clinic',
     body: 'We talk through your symptoms and goals, examine the knee and scan it live with ultrasound. If Arthrosamid® isn’t right for you, we’ll say so.',
   },
   {
@@ -76,8 +76,8 @@ export const STEPS = [
   },
   {
     title: 'The ultrasound-guided injection',
-    img: './media/ultrasound.jpg',
-    alt: 'A clinician in blue gloves adjusting an ultrasound machine',
+    img: './media/arthrosamid-ready.jpg',
+    alt: 'An Arthrosamid® pack ready on a sterile trolley beside the ultrasound machine',
     body: 'The knee is numbed, any excess fluid drawn off, and the gel placed under ultrasound guidance in a few seconds. No stitches, just a plaster.',
     note: 'Needle-phobic? Tell us. It’s something we handle every week.',
   },
@@ -113,9 +113,9 @@ export const CLINICIAN = {
     { big: '25+ yrs', small: 'NHS musculoskeletal experience' },
     { big: '4', small: 'university-qualified specialisms' },
   ],
-  // Optional. With no photo, a credentials card is shown instead. To add one later,
-  // drop it in /public and set photo: './ram-rachaputi.jpg'
-  photo: '',
+  // Real clinic photo of Ram scanning a knee (patient covered, not identifiable).
+  // Set to '' to show the credentials card instead.
+  photo: './media/ram-scanning.jpg',
 };
 
 export const FEATURED_REVIEW = {
