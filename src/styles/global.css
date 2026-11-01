@@ -215,6 +215,8 @@ button{font:inherit;color:inherit}
 .clin__seal-arc{fill:none;stroke:var(--gold);stroke-width:3.5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:.25}
 .anim .clin__seal-arc{stroke-dashoffset:1;animation:sealdraw 1.8s var(--ease) .4s forwards}
 @keyframes sealdraw{to{stroke-dashoffset:.25}}
+.clin__avatar{position:absolute;inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);border-radius:50%;object-fit:cover;object-position:50% 40%;box-shadow:0 8px 20px -8px rgba(0,0,0,.5)}
+.clin__seal svg{z-index:1;pointer-events:none}
 .clin__seal span{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--font-display);font-weight:500;font-size:3.1rem;letter-spacing:-.03em}
 .clin__name{font-family:var(--font-display);font-weight:600;font-size:1.9rem;line-height:1.1}
 .clin__letters{margin-top:.35rem;font-size:.9rem;font-weight:600;letter-spacing:.04em;color:var(--gold)}

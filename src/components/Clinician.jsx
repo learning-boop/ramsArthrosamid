@@ -16,12 +16,14 @@ export default function Clinician() {
         ) : (
           /* No photo: a credentials card that leads with verifiable facts */
           <Reveal className="clin__card" style={{ '--clin-img': 'url(./media/ultrasound.jpg)' }}>
-            <div className="clin__seal" aria-hidden="true">
+            <div className="clin__seal" aria-hidden={CLINICIAN.avatar ? undefined : true}>
               <svg viewBox="0 0 120 120">
                 <circle cx="60" cy="60" r="56" className="clin__seal-ring" />
                 <circle cx="60" cy="60" r="56" className="clin__seal-arc" pathLength="1" />
               </svg>
-              <span>{initials}</span>
+              {CLINICIAN.avatar
+                ? <img className="clin__avatar" src={CLINICIAN.avatar} alt={`${CLINICIAN.fullName}`} />
+                : <span>{initials}</span>}
             </div>
             <p className="clin__name">{CLINICIAN.fullName}</p>
             <p className="clin__letters">{CLINICIAN.letters}</p>

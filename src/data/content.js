@@ -113,9 +113,11 @@ export const CLINICIAN = {
     { big: '25+ yrs', small: 'NHS musculoskeletal experience' },
     { big: '4', small: 'university-qualified specialisms' },
   ],
-  // Real clinic photo of Ram scanning a knee (patient covered, not identifiable).
-  // Set to '' to show the credentials card instead.
-  photo: './media/ram-scanning.jpg',
+  // Large photo mode (replaces the credentials card). Empty = show the credentials card.
+  photo: '',
+  // Small round photo inside the credentials card's ring (in place of the initials).
+  // Cropped from a clinic photo; a front-facing headshot would suit this circle better.
+  avatar: './media/ram-avatar.jpg',
 };
 
 export const FEATURED_REVIEW = {
