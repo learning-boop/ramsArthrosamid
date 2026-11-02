@@ -139,7 +139,7 @@ export default function Hero() {
           </h1>
 
           <motion.p className="hero__sub lead" {...fade(0.9)}>
-            Explore whether a single, ultrasound-guided Arthrosamid® hydrogel injection with {CLINICIAN.name}, {CLINICIAN.statutoryTitle}, is appropriate for your knee.
+            Explore whether a single, <mark className="hero__hl">ultrasound-guided Arthrosamid® hydrogel injection</mark> with {CLINICIAN.name}, {CLINICIAN.statutoryTitle}, is appropriate for your knee.
           </motion.p>
 
           <motion.div className="hero__cta" {...fade(1.35)}>
