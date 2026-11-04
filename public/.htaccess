@@ -1,0 +1,14 @@
+# Clean booking address: /book serves book.html, and old /book.html or /book/ links redirect to /book.
+# Written without RewriteBase so it works from the main domain or a subfolder.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{THE_REQUEST} \s[^?\s]*/book\.html[?\s]
+  RewriteCond %{REQUEST_URI} ^(.*)/book\.html$
+  RewriteRule ^book\.html$ %1/book [R=301,L]
+
+  RewriteCond %{REQUEST_URI} ^(.*)/book/$
+  RewriteRule ^book/$ %1/book [R=301,L]
+
+  RewriteRule ^book$ book.html [L]
+</IfModule>

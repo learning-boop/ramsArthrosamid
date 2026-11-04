@@ -8,7 +8,8 @@ export const CLINIC = {
   postalAddress: '78 Clifton Road, Rugby, Warwickshire, CV21 3QT',
   website: 'https://jointcareclinics.co.uk',
   // Every "Book a consultation" button goes to the booking page.
-  bookingUrl: './book.html',
+  // './book' needs public/.htaccess on cPanel and vercel.json on Vercel.
+  bookingUrl: './book',
 };
 
 // Public brand shown in the logo, page title and copyright. Joint Care Clinics (CLINIC above)
