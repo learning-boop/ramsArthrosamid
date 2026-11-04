@@ -15,7 +15,7 @@ export default function Clinician() {
           </Reveal>
         ) : (
           /* No photo: a credentials card that leads with verifiable facts */
-          <Reveal className="clin__card" style={{ '--clin-img': 'url(./media/ultrasound.jpg)' }}>
+          <Reveal className="clin__card" style={{ '--clin-img': `url(${new URL('./media/ultrasound.jpg', document.baseURI).href})` }}>
             <div className="clin__seal" aria-hidden={CLINICIAN.avatar ? undefined : true}>
               <svg viewBox="0 0 120 120">
                 <circle cx="60" cy="60" r="56" className="clin__seal-ring" />
