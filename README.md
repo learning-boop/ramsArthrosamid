@@ -19,7 +19,7 @@ Deploy the contents of `dist/` to any static host (cPanel public_html, Netlify, 
 | File | What to edit there |
 | --- | --- |
 | `src/config.js` | Phone, email, address, prices, and `FORM_ENDPOINT` |
-| `book.html`, `src/components/BookPage.jsx` (address `/book`: `public/.htaccess` on cPanel, `vercel.json` on Vercel) | Booking page. Requests are emailed via [Web3Forms](https://web3forms.com): Rugby, Birmingham & Solihull, Leicester and Milton Keynes to info@jointcareclinics.co.uk, Newcastle to info@jointcarenortheast.co.uk (`BOOKING` in config.js, `inbox` per clinic in content.js). Paste each inbox's Web3Forms access key into `BOOKING.inboxes`; until then the form shows a call/email fallback. |
+| `book.html`, `src/components/BookPage.jsx` (address `/book`: `public/.htaccess` on cPanel, `vercel.json` on Vercel) | Booking page. `public/api/booking.php` (PHP, PHPMailer) emails each request from a mailbox on the hosting: Rugby, Birmingham & Solihull, Leicester and Milton Keynes to info@jointcareclinics.co.uk, Newcastle to info@jointcarenortheast.co.uk. Needs PHP hosting and `booking-config.php` on the server (see `public/api/booking-config.example.php`); until then the form shows a call/email fallback. |
 | `src/data/content.js` | All copy: nav, steps, timeline, comparison table, inclusions, suitability lists, clinician profile, reviews, FAQs, clinics |
 | `src/styles/global.css` | Design tokens (`:root`), layout and every animation keyframe |
 | `src/components/Hero.jsx` | Full-screen video hero: name, headline, one line of copy, buttons and a three-stat strip |

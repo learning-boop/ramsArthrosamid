@@ -5,7 +5,7 @@ import Reveal from './Reveal.jsx';
 import OpeningHours from './OpeningHours.jsx';
 import { Phone, Pin, Check } from './Icons.jsx';
 import { CLINICS } from '../data/content.js';
-import { CLINIC, BRAND, PRICE, BOOKING } from '../config.js';
+import { CLINIC, PRICE, BOOKING } from '../config.js';
 
 const OPTIONS = [
   { value: 'treatment', label: `Full Arthrosamid® hydrogel treatment (${PRICE.perKnee} per knee, all-inclusive)` },
@@ -38,7 +38,8 @@ export default function BookPage() {
     if (status?.kind === 'ok') bodyRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, [status]);
   const clinic = useMemo(() => CLINICS.find((c) => c.slug === form.clinic), [form.clinic]);
-  const inbox = clinic ? BOOKING.inboxes[clinic.inbox] : null; // { email, accessKey }
+  const inbox = clinic ? BOOKING.inboxes[clinic.inbox] : null;
+  const openedAt = useRef(Date.now()); // how long the form took to fill in: a spam check on the server
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.type === 'checkbox' ? e.target.checked : e.target.value }));
 
@@ -55,37 +56,32 @@ export default function BookPage() {
     }
     if (form.website) { setStatus({ kind: 'ok', text: 'Thank you.' }); return; } // honeypot: bots fill this
 
-    const option = OPTIONS.find((o) => o.value === form.option).label;
     setStatus({ kind: 'sending', text: 'Sending…' });
     try {
-      if (!inbox.accessKey) throw new Error(`No Web3Forms access key set for ${inbox.email}`);
       const res = await fetch(BOOKING.endpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          access_key: inbox.accessKey,
-          subject: `Arthrosamid® consultation request – ${clinic.name}`,
-          from_name: `${BRAND.name} website`,
-          email: form.email.trim() || undefined, // reply-to: replying goes straight to the patient
-          Treatment: 'Arthrosamid® hydrogel knee injection',
-          Clinic: `${clinic.name} – ${clinic.address}`,
-          'Interested in': option,
-          Knee: form.knee,
-          Name: form.name.trim(),
-          Phone: form.phone.trim(),
-          Email: form.email.trim() || 'Not given',
-          Message: form.message.trim() || '—',
-          Source: 'Website booking form',
+          clinic: form.clinic,
+          option: form.option,
+          knee: form.knee,
+          name: form.name.trim(),
+          phone: form.phone.trim(),
+          email: form.email.trim(),
+          message: form.message.trim(),
+          consent: form.consent,
+          website: form.website,
+          elapsed: Math.round((Date.now() - openedAt.current) / 1000),
         }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok || data.success !== true) throw new Error(data.message || data.body?.message || 'not sent');
+      if (!res.ok || data.success !== true) throw new Error(data.message || 'not sent');
       const first = form.name.trim().split(' ')[0];
       setStatus({ kind: 'ok', text: `Thank you, ${first}. Your request has been sent to our ${clinic.name} clinic team, who will call you on ${form.phone.trim()} to arrange your appointment.` });
       setForm((f) => ({ ...initialForm(), clinic: f.clinic }));
     } catch (err) {
       console.error('Booking not sent:', err.message);
-      setStatus({ kind: 'error', text: `Sorry, we couldn’t send that just now. Please call ${CLINIC.phoneDisplay} or email ${inbox.email}.` });
+      setStatus({ kind: 'error', text: `Sorry, we couldn’t send that just now. Please call ${CLINIC.phoneDisplay} or email ${inbox}.` });
     }
   };
 
