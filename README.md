@@ -21,6 +21,8 @@ Deploy the contents of `dist/` to any static host (cPanel public_html, Netlify, 
 - Preferred address is `https://kneepainclinic.uk` (no www). `public/.htaccess` redirects http, www and
   `/index.html` to it, and serves `/book`. Canonical tags are in `index.html` and `book.html`.
 - `public/sitemap.xml` and `public/robots.txt` list the public pages. Add any new page to the sitemap.
+- Ram's profile: `ram-rachaputi.html` + `src/components/RamPage.jsx`, served at `/ram-rachaputi`
+  (no trailing slash, so the relative asset paths keep working).
 
 ## Where things live
 

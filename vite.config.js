@@ -7,7 +7,7 @@ export default defineConfig({
   base: './',
   build: {
     rollupOptions: {
-      input: { main: 'index.html', book: 'book.html' },
+      input: { main: 'index.html', book: 'book.html', ram: 'ram-rachaputi.html' },
     },
   },
 });

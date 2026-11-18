@@ -26,6 +26,16 @@
   RewriteRule ^book/$ %1/book [R=301,L]
 
   RewriteRule ^book$ book.html [L]
+
+  # Ram's profile: /ram-rachaputi serves ram-rachaputi.html; .html and trailing-slash links redirect to it.
+  RewriteCond %{THE_REQUEST} \s[^?\s]*/ram-rachaputi\.html[?\s]
+  RewriteCond %{REQUEST_URI} ^(.*)/ram-rachaputi\.html$
+  RewriteRule ^ram-rachaputi\.html$ %1/ram-rachaputi [R=301,L]
+
+  RewriteCond %{REQUEST_URI} ^(.*)/ram-rachaputi/$
+  RewriteRule ^ram-rachaputi/$ %1/ram-rachaputi [R=301,L]
+
+  RewriteRule ^ram-rachaputi$ ram-rachaputi.html [L]
 </IfModule>
 
 # Basic security headers that don't affect how the site works.

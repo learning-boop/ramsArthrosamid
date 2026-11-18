@@ -10,6 +10,8 @@ export const CLINIC = {
   // Every "Book a consultation" button goes to the booking page.
   // './book' needs public/.htaccess on cPanel and vercel.json on Vercel.
   bookingUrl: './book',
+  // Ram's profile page (served by public/.htaccess on cPanel, vercel.json on Vercel).
+  profileUrl: './ram-rachaputi',
 };
 
 // Public brand shown in the logo, page title and copyright. Joint Care Clinics (CLINIC above)

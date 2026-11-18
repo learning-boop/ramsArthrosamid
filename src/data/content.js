@@ -146,6 +146,14 @@ export const FAQS = [
 ];
 
 // Joint Care Clinics locations where Ram sees patients (from jointcareclinics.co.uk/contact).
+// "What happens at your assessment" on the /ram-rachaputi profile page.
+export const ASSESSMENT = [
+  { title: 'Your symptoms and goals', body: 'Ram asks about your knee, your history and what you want to be able to do again.' },
+  { title: 'Examination and ultrasound scan', body: 'He examines the knee and, where appropriate, scans it live with ultrasound so you can see what’s happening.' },
+  { title: 'Your options explained', body: 'He explains whether Arthrosamid® or another approach may suit you, including possible risks and the full cost.' },
+  { title: 'Decide in your own time', body: 'There’s no pressure to go ahead on the day. If treatment isn’t right for you, he’ll tell you.' },
+];
+
 export const CLINICS = [
   { slug: 'birmingham', inbox: 'jointcare', name: 'Birmingham & Solihull', address: '265B Alcester Road South, King’s Heath, Birmingham B14 6DT' },
   { slug: 'leicester', inbox: 'jointcare', name: 'Leicester', address: 'No 1, Holmfield Court, Holmfield Road, Leicester LE2 1SD' },
