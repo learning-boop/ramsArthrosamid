@@ -12,18 +12,18 @@ export default function Price() {
         <div className="price__intro">
           <Reveal as="p" className="kicker">Price</Reveal>
           <Reveal as="h2" className="h2" id="priceTitle">One price. Everything included.</Reveal>
-          <Reveal as="p" className="lead">No hidden extras on the day. You’ll know the full cost before you walk in.</Reveal>
+          <Reveal as="p" className="lead">No hidden extras on the day. You’ll know the full cost before you walk in, and treatment only goes ahead if your consultation confirms it’s suitable for your knee.</Reveal>
         </div>
 
         <div className="price__cards">
           <Reveal className="price__card price__card--main">
-            <span className="price__badge">Full treatment</span>
+            <span className="price__badge">Full treatment, if suitable</span>
             <p className="price__name">Ultrasound-guided Arthrosamid® hydrogel injection</p>
             <p className="price__amount"><b>{PRICE.perKnee}</b><span>per knee, all-inclusive</span></p>
             <ul className="price__inc">
               {INCLUSIONS.map((item) => <li key={item}><Check />{item}</li>)}
             </ul>
-            <Magnetic><a className="btn btn--primary btn--shine" href={CLINIC.bookingUrl}>Book a consultation</a></Magnetic>
+            <Magnetic><a className="btn btn--primary btn--shine" href={CLINIC.bookingUrl}>Request a consultation</a></Magnetic>
           </Reveal>
 
           <Reveal className="price__card price__card--alt" delay={0.12}>

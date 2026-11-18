@@ -68,7 +68,7 @@ export const StageIcon = ({ kind }) => {
     </svg>
   );
   return (
-    // Gel drop inside four gold segments: one per year of reported relief
+    // Gel drop inside four gold segments: decorative
     <svg className="stage-icon" viewBox="0 0 64 64" aria-hidden="true">
       {[0, 1, 2, 3].map((i) => (
         <path

@@ -14,7 +14,7 @@ export default function How() {
             <Reveal as="p" className="kicker">How it works</Reveal>
             <Reveal as="h2" className="h2" id="howTitle">What Arthrosamid® hydrogel does inside the knee</Reveal>
             <Reveal as="p" className="lead">
-              A soft hydrogel that becomes part of the knee’s lining, cushioning the joint and calming the irritation behind the pain.
+              A non-absorbable hydrogel injected into the knee joint, intended to help ease the symptoms of knee osteoarthritis. It does not regrow cartilage or cure osteoarthritis.
             </Reveal>
           </div>
           <Reveal className="how__visual"><KneeAnatomy /></Reveal>
@@ -39,6 +39,9 @@ export default function How() {
             </Reveal>
           ))}
         </div>
+        <Reveal as="p" className="how__source">
+          Read the manufacturer’s <a href="https://arthrosamid.com/patient" target="_blank" rel="noopener noreferrer">patient information and safety details</a>, including who should not have the injection.
+        </Reveal>
       </div>
     </section>
   );

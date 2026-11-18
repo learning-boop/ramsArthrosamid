@@ -19,27 +19,20 @@ export const WHY_CHOOSE = [
 
 export const STAGES = [
   {
-    title: 'A soft gel, placed precisely',
-    body: 'A single 6 ml dose of hydrogel is placed into the knee under live ultrasound, so it goes exactly where it should.',
+    title: 'A soft gel, placed with ultrasound',
+    body: 'A single 6 ml dose of hydrogel is injected into the knee joint, with ultrasound used to guide the needle.',
     icon: 'needle',
   },
   {
     title: 'It becomes part of the lining',
-    body: 'Over the following weeks it joins the joint lining, forming a cushioning layer that calms pain, stiffness and swelling.',
+    body: 'Over the following weeks the hydrogel integrates into the joint lining. It is intended to help ease symptoms such as pain and stiffness; how much it helps varies from person to person.',
     icon: 'lining',
   },
   {
-    title: 'And it stays',
-    body: 'Unlike cortisone or hyaluronic acid, it isn’t absorbed. Pain relief has been reported for up to five years after one injection.',
+    title: 'It isn’t absorbed',
+    body: 'Unlike steroid or hyaluronic acid injections, the hydrogel is not broken down by the body. Ask Ram what the published studies show about how long any benefit may last, and their limits.',
     icon: 'clock',
   },
-];
-
-export const STATS = [
-  { value: 1, prefix: '', suffix: '', label: 'injection. No course to complete, no top-ups scheduled.' },
-  { value: 5, prefix: 'up to ', suffix: ' yrs', label: 'of pain relief reported in clinical follow-up after a single treatment.' },
-  { value: 30000, prefix: '', suffix: '+', label: 'ultrasound-guided injections carried out by our lead clinician.', comma: true },
-  { value: 20, prefix: '', suffix: '+ yrs', label: 'of NHS musculoskeletal experience behind every appointment.' },
 ];
 
 // Everything the £2,300 per-knee price covers (shown on the Price card).
@@ -51,24 +44,17 @@ export const INCLUSIONS = [
   'Ultrasound-guided Arthrosamid® hydrogel injection',
 ];
 
-// "Also available": other ultrasound-guided injections Ram offers. Plain words, no promises.
-export const OTHER_INJECTIONS = [
-  { icon: 'gel', aka: 'Gel injection', name: 'Hyaluronic acid', body: 'A lubricating gel that tops up the knee’s natural joint fluid, often used for osteoarthritis. Relief can last several months.' },
-  { icon: 'prp', aka: 'PRP', name: 'Platelet-rich plasma', body: 'A concentrate of platelets from a small sample of your own blood, injected to support the body’s natural healing in joints and tendons.' },
-  { icon: 'steroid', aka: 'Cortisone', name: 'Steroid injection', body: 'A strong anti-inflammatory that can quickly calm a painful flare-up. Relief usually lasts weeks to a few months.' },
-];
-
 export const STEPS = [
   {
     title: 'Consultation and ultrasound scan',
     img: './media/ram-knee-scan.jpg',
     alt: 'Ram Rachaputi scanning a patient’s knee with ultrasound in the clinic',
-    body: 'We talk through your symptoms and goals, examine the knee and scan it live with ultrasound. If Arthrosamid® isn’t right for you, we’ll say so.',
+    body: 'We talk through your symptoms and goals, examine the knee and, where appropriate, scan it with ultrasound. If Arthrosamid® isn’t right for you, we’ll say so.',
   },
   {
     title: 'Antibiotics',
     img: './media/antibiotic.jpg',
-    alt: 'A hand offering a tablet alongside a glass of water',
+    alt: 'A tablet being placed in a patient’s hand, with a glass of water',
     body: 'You’re given a single dose of antibiotics to help protect the knee from infection.',
     note: 'There’s a 60–90 minute wait after the antibiotics before your injection.',
     noteIcon: 'clock',
@@ -76,15 +62,15 @@ export const STEPS = [
   {
     title: 'The ultrasound-guided injection',
     img: './media/arthrosamid-ready.jpg',
-    alt: 'An Arthrosamid® pack ready on a sterile trolley beside the ultrasound machine',
+    alt: 'An Arthrosamid® pack and syringes on a covered trolley beside an ultrasound machine',
     body: 'The knee is numbed, any excess fluid drawn off, and the gel placed under ultrasound guidance in a few seconds. No stitches, just a plaster.',
     note: 'Needle-phobic? Tell us. It’s something we handle every week.',
   },
   {
-    title: 'Home the same day',
+    title: 'Aftercare',
     img: './media/beach-couple.jpg',
     alt: 'An older couple walking together along a beach',
-    body: 'A short rest, then home with written aftercare and a direct number. Most patients are able to drive again after a few hours.',
+    body: 'After a short rest you’re given written aftercare advice and a number to call with any concerns. Ask the clinic before your appointment whether to arrange a lift home, as driving advice depends on your knee and how you feel.',
   },
 ];
 
@@ -94,7 +80,7 @@ export const CLINICIAN = {
   // Protected title as registered with the HCPC (used in the hero).
   statutoryTitle: 'HCPC-registered Consultant Physiotherapist',
   letters: 'BPT, PG Dip, PG Cert, MCSP, MSOR',
-  intro: 'Ram is an HCPC-registered consultant physiotherapist, musculoskeletal sonographer and independent prescriber, with more than 25 years of NHS musculoskeletal experience and over 30,000 ultrasound-guided injections behind him.',
+  intro: 'Ram is an HCPC-registered consultant physiotherapist, musculoskeletal sonographer and independent prescriber, with more than 25 years of NHS musculoskeletal experience, including ultrasound-guided injections.',
   quals: [
     'Bachelor of Physiotherapy, Karnatak University, 2001',
     'Postgraduate Diploma in Neuromusculoskeletal Healthcare, Keele University, 2003',
@@ -102,15 +88,15 @@ export const CLINICIAN = {
     'Practised at King’s College Hospital London, York University Hospital, Coventry University Hospital, Warwick & Stratford, Walsall Manor (Birmingham), Freeman Hospital Newcastle and Ashford & St Peter’s',
     'Worked across radiology, rheumatology and physiotherapy departments, in hospitals and private clinics',
     'Advanced procedures including SI joint, facet joint and coccyx injections, hydrodilatation for frozen shoulder, barbotage for calcific tendinopathy, and hyaluronic acid injections',
-    'Several thousand diagnostic scans and more than 30,000 ultrasound-guided injections, including many patients with needle phobia',
   ],
   registrations: ['Accredited Arthrosamid® provider', 'HCPC registered', 'Chartered Society of Physiotherapy', 'Society of Radiographers'],
   role: 'Consultant physiotherapist · MSK sonographer · Independent prescriber',
-  // Shown on the credentials card (used while there's no photo). All facts from the profile above.
+  // Shown on the credentials card (used while there's no photo). Only facts stated in the profile above;
+  // add counts (e.g. number of injections) only once they're verified.
   highlights: [
-    { big: '30,000+', small: 'ultrasound-guided injections' },
     { big: '25+ yrs', small: 'NHS musculoskeletal experience' },
-    { big: '4', small: 'university-qualified specialisms' },
+    { big: 'HCPC', small: 'registered physiotherapist' },
+    { big: 'MSK', small: 'sonographer and prescriber' },
   ],
   // Large photo mode (replaces the credentials card). Empty = show the credentials card.
   photo: '',
@@ -202,7 +188,7 @@ export const CLINICS = [
 
 // Trust band under the hero. Every item is a fact stated elsewhere on the page.
 export const CREDENTIALS = [
-  { big: '30,000+', small: 'ultrasound-guided injections' },
+  { big: '25+ yrs', small: 'NHS musculoskeletal experience' },
   { big: 'HCPC', small: 'registered clinician' },
   { big: 'Accredited', small: 'Arthrosamid® provider' },
   { big: 'CE-marked', small: 'Arthrosamid® hydrogel' },

@@ -4,12 +4,12 @@ import { useInView, useReducedMotion } from 'framer-motion';
 /*
  * Front view of the knee in three states. Switching state animates the joint: in osteoarthritis the
  * cartilage thins, the joint space narrows, bone spurs form and the lining becomes inflamed; with
- * Arthrosamid® the lining calms and a cushioning hydrogel layer forms inside it (cartilage is not regrown).
+ * Arthrosamid® a hydrogel layer forms inside the lining (cartilage is not regrown).
  */
 const STATES = [
   { key: 'healthy', label: 'Healthy knee', note: 'Smooth cartilage cushions the bones, and a thin, calm lining keeps the joint moving freely.' },
   { key: 'oa', label: 'Osteoarthritis', note: 'Cartilage wears thin, the joint space narrows, bone spurs form and the lining becomes inflamed, causing pain, stiffness and swelling.' },
-  { key: 'gel', label: 'With Arthrosamid®', note: 'The hydrogel joins the lining, forming a cushioning layer that calms inflammation. It doesn’t regrow cartilage; it protects the joint from the inside.' },
+  { key: 'gel', label: 'With Arthrosamid®', note: 'The hydrogel integrates into the joint lining. It is intended to help ease symptoms; it doesn’t regrow cartilage or reverse osteoarthritis.' },
 ];
 
 export default function KneeAnatomy() {
