@@ -6,9 +6,9 @@ import { CLINIC, PRICE, HERO_VIDEO } from '../config.js';
 import { CLINICIAN } from '../data/content.js';
 
 const EASE = [0.2, 0.7, 0.2, 1];
-const HEADLINE_WORDS = 'Speak With Our Registered Team About Knee Osteoarthritis'.split(' ');
-// The last two words ("Knee Osteoarthritis") sit inside the gold highlight.
-const HIGHLIGHT_FROM = HEADLINE_WORDS.length - 2;
+const HEADLINE_WORDS = 'Knee osteoarthritis getting in the way of everyday life?'.split(' ');
+// The first two words ("Knee osteoarthritis") are gold.
+const HIGHLIGHT_TO = 2;
 // Copy starts once the intro curtain has lifted.
 const T0 = 0.9;
 
@@ -100,8 +100,8 @@ export default function Hero() {
       <motion.div className="wrap hero__inner" style={reduce ? undefined : { y: copyY, opacity: copyOpacity }}>
         <div className="hero__copy">
           <h1 className="hero__title hero__h1" id="heroTitle">
-            {HEADLINE_WORDS.map((word, i) => {
-              const w = (
+            <mark className="hero__hl">
+              {HEADLINE_WORDS.slice(0, HIGHLIGHT_TO).map((w, i) => (
                 <span key={i}>
                   <span className="word">
                     <motion.span
@@ -109,47 +109,41 @@ export default function Hero() {
                       animate={reduce ? {} : { y: 0, rotate: 0 }}
                       transition={{ duration: 0.9, ease: EASE, delay: T0 + 0.15 + i * 0.07 }}
                     >
-                      {word}
+                      {w}
                     </motion.span>
                   </span>
-                  {i < HEADLINE_WORDS.length - 1 ? ' ' : ''}
+                  {' '}
                 </span>
-              );
-              return i < HIGHLIGHT_FROM ? w : null;
-            })}
-            <mark className="hero__hl">
-              {HEADLINE_WORDS.slice(HIGHLIGHT_FROM).map((word, j) => {
-                const i = HIGHLIGHT_FROM + j;
-                return (
-                  <span key={i}>
-                    <span className="word">
-                      <motion.span
-                        initial={reduce ? false : { y: '110%', rotate: 3 }}
-                        animate={reduce ? {} : { y: 0, rotate: 0 }}
-                        transition={{ duration: 0.9, ease: EASE, delay: T0 + 0.15 + i * 0.07 }}
-                      >
-                        {word}
-                      </motion.span>
-                    </span>
-                    {i < HEADLINE_WORDS.length - 1 ? ' ' : ''}
-                  </span>
-                );
-              })}
+              ))}
             </mark>
+            {HEADLINE_WORDS.slice(HIGHLIGHT_TO).map((w, k) => (
+              <span key={k}>
+                  <span className="word">
+                    <motion.span
+                      initial={reduce ? false : { y: '110%', rotate: 3 }}
+                      animate={reduce ? {} : { y: 0, rotate: 0 }}
+                      transition={{ duration: 0.9, ease: EASE, delay: T0 + 0.15 + (HIGHLIGHT_TO + k) * 0.07 }}
+                    >
+                      {w}
+                    </motion.span>
+                  </span>
+                {k < HEADLINE_WORDS.length - HIGHLIGHT_TO - 1 ? ' ' : ''}
+              </span>
+            ))}
           </h1>
 
           <motion.p className="hero__sub lead" {...fade(0.9)}>
-            Explore how a single, <mark className="hero__hl">ultrasound-guided Arthrosamid® hydrogel injection</mark> with {CLINICIAN.name}, {CLINICIAN.statutoryTitle}, may help your knee.
+            If you are considering an <mark className="hero__hl">Arthrosamid® hydrogel knee injection</mark>, talk through your options with {CLINICIAN.name}. A consultation can help you understand the treatment, its risks and whether it may be suitable for your knee.
           </motion.p>
 
           <motion.div className="hero__cta" {...fade(1.35)}>
-            <Magnetic><a className="btn btn--primary btn--pulse btn--shine" href={CLINIC.bookingUrl}>Book a consultation</a></Magnetic>
-            <Magnetic><a className="btn btn--glass hero__call" href={CLINIC.phoneHref} aria-label={`Call ${CLINIC.phoneDisplay}`}><Phone /><span className="only-wide">Call {CLINIC.phoneDisplay}</span></a></Magnetic>
+            <Magnetic><a className="btn btn--primary btn--pulse btn--shine" href={CLINIC.bookingUrl}>Request a consultation</a></Magnetic>
+            <Magnetic><a className="btn btn--glass hero__call" href={CLINIC.phoneHref} aria-label={`Call the clinic team on ${CLINIC.phoneDisplay}`}><Phone /><span className="only-wide">Call the clinic team</span></a></Magnetic>
           </motion.div>
 
           <motion.dl className="hero__stats" {...fade(1.5)}>
             <div><dt>1</dt><dd>appointment</dd></div>
-            <div><dt>5<small>yrs</small></dt><dd>relief reported</dd></div>
+            <div><dt>{PRICE.consultationAndScan}</dt><dd>consultation &amp; scan</dd></div>
             <div><dt>{PRICE.perKnee}</dt><dd>per knee, all-in</dd></div>
           </motion.dl>
         </div>

@@ -13,14 +13,13 @@ const OPTIONS = [
   { value: 'other', label: 'Another injection (hyaluronic acid, PRP or steroid)' },
   { value: 'unsure', label: 'Not sure yet, I’d like advice' },
 ];
-const KNEES = ['Right', 'Left', 'Both', 'Not sure'];
 
 /** Read ?clinic= and ?option= so buttons elsewhere can open the form preselected. */
 function initialForm() {
   const q = new URLSearchParams(typeof window === 'undefined' ? '' : window.location.search);
   const clinic = CLINICS.some((c) => c.slug === q.get('clinic')) ? q.get('clinic') : '';
-  const option = OPTIONS.some((o) => o.value === q.get('option')) ? q.get('option') : 'treatment';
-  return { name: '', phone: '', email: '', clinic, option, knee: 'Right', message: '', consent: false, website: '' };
+  const option = OPTIONS.some((o) => o.value === q.get('option')) ? q.get('option') : 'unsure';
+  return { name: '', phone: '', email: '', clinic, option, knee: '', message: '', consent: false, website: '' };
 }
 
 /**
@@ -92,8 +91,8 @@ export default function BookPage() {
         <section className="book-hero" aria-labelledby="bookTitle">
           <div className="wrap">
             <p className="kicker">Book</p>
-            <h1 className="h2" id="bookTitle">Book your Arthrosamid® consultation</h1>
-            <p className="lead">Tell us a little about your knee and choose a clinic. The clinic team will call you to arrange your appointment.</p>
+            <h1 className="h2" id="bookTitle">Request an Arthrosamid® consultation with Ram Rachaputi</h1>
+            <p className="lead">Tell us where you would prefer to be seen and how we can contact you. The booking team will explain the available appointments and next steps. An enquiry does not confirm that treatment is suitable for you.</p>
           </div>
         </section>
 
@@ -109,7 +108,7 @@ export default function BookPage() {
             ) : (
               <form className="form book-form" noValidate onSubmit={onSubmit}>
                 <fieldset className="book-form__group">
-                  <legend>1. Choose a clinic</legend>
+                  <legend>1. Preferred location</legend>
                   <div className="book-clinics" role="radiogroup" aria-label="Clinic">
                     {CLINICS.map((c) => (
                       <label key={c.slug} className={`book-clinic${form.clinic === c.slug ? ' is-on' : ''}`}>
@@ -123,32 +122,15 @@ export default function BookPage() {
                 </fieldset>
 
                 <fieldset className="book-form__group">
-                  <legend>2. What you’re interested in</legend>
-                  <div className="book-options">
-                    {OPTIONS.map((o) => (
-                      <label key={o.value} className={`book-option${form.option === o.value ? ' is-on' : ''}`}>
-                        <input type="radio" name="option" value={o.value} checked={form.option === o.value} onChange={set('option')} />
-                        <span>{o.label}</span>
-                      </label>
-                    ))}
-                  </div>
-                  <div className="field book-knee">
-                    <label htmlFor="bKnee">Which knee?</label>
-                    <select id="bKnee" value={form.knee} onChange={set('knee')}>
-                      {KNEES.map((k) => <option key={k}>{k}</option>)}
-                    </select>
-                  </div>
-                </fieldset>
-
-                <fieldset className="book-form__group">
-                  <legend>3. Your details</legend>
+                  <legend>2. Your details</legend>
                   <div className="form__grid">
                     <div className="field"><label htmlFor="bName">Your name</label><input id="bName" type="text" autoComplete="name" value={form.name} onChange={set('name')} required /></div>
                     <div className="field"><label htmlFor="bPhone">Phone number</label><input id="bPhone" type="tel" autoComplete="tel" inputMode="tel" value={form.phone} onChange={set('phone')} required /></div>
                     <div className="field span2"><label htmlFor="bEmail">Email (optional)</label><input id="bEmail" type="email" autoComplete="email" value={form.email} onChange={set('email')} /></div>
                     <div className="field span2">
-                      <label htmlFor="bMsg">Anything you’d like us to know? (optional)</label>
-                      <textarea id="bMsg" value={form.message} onChange={set('message')} placeholder="For example: how long you’ve had knee pain, treatments you’ve tried, or the best time to call." />
+                      <label htmlFor="bMsg">Short question (optional)</label>
+                      <textarea id="bMsg" value={form.message} onChange={set('message')} maxLength={500} placeholder="For example: the best time to call, or a question about appointments." />
+                      <p className="field__hint">Please don’t include detailed medical information here. The clinician will ask about your health at your consultation.</p>
                     </div>
                   </div>
                   <div className="hp" aria-hidden="true">
@@ -157,7 +139,7 @@ export default function BookPage() {
                   </div>
                   <label className="form__consent">
                     <input type="checkbox" checked={form.consent} onChange={set('consent')} required />
-                    <span>I’m happy for {clinic?.operator || CLINIC.name} to contact me about my Arthrosamid® enquiry. We never share your details.</span>
+                    <span>I’m happy for {clinic?.operator || CLINIC.name} to contact me about my enquiry. See the <a href={`${CLINIC.website}/privacy-policy/`} target="_blank" rel="noopener noreferrer">privacy policy</a> for how your details are used.</span>
                   </label>
                 </fieldset>
 

@@ -10,7 +10,7 @@ export default function Footer({ onHome = true }) {
           <a className="brand" href={onHome ? '#home' : './'} aria-label={`${BRAND.name} home`}>
             <Logo tone="white" />
           </a>
-          <p className="footer__blurb">Private musculoskeletal ultrasound scans and ultrasound-guided injections across Warwickshire, the West Midlands, Buckinghamshire, Leicestershire and the North East.</p>
+          <p className="footer__blurb">KneePainClinic is Ram Rachaputi’s information website about Arthrosamid® knee injections. Appointments take place at host clinics run by separate businesses: Joint Care Clinics (Rugby, Birmingham & Solihull, Leicester, Milton Keynes) and Joint Care North East (Newcastle).</p>
           <div className="footer__regs"><span>HCPC</span><span>CSP</span><span>SoR</span></div>
         </div>
         <div>

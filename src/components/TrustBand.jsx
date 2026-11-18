@@ -1,19 +1,14 @@
 import Reveal from './Reveal.jsx';
-import { CREDENTIALS, FEATURED_REVIEW } from '../data/content.js';
+import { CREDENTIALS } from '../data/content.js';
 
-/** Straight after the hero: the clinician's credentials and one line from the best-known patient. */
+/**
+ * Straight after the hero: the clinician's credentials. Patient quotes were removed until each reviewer's
+ * written consent is confirmed (see Testimonials.jsx, kept for that).
+ */
 export default function TrustBand() {
   return (
-    <section className="trust" aria-label="Why patients trust us">
+    <section className="trust" aria-label="Your clinician’s credentials">
       <div className="wrap">
-        <Reveal as="figure" className="trust__quote">
-          <div className="trust__stars" aria-label="Five-star review">★★★★★</div>
-          <blockquote>“Ram has been right up there with his care and skill. Never in a rush, he’s kind, compassionate and very professional.”</blockquote>
-          <figcaption>
-            <span className="trust__avatar" aria-hidden="true">DG</span>
-            <span><strong>{FEATURED_REVIEW.name}</strong>{FEATURED_REVIEW.role}</span>
-          </figcaption>
-        </Reveal>
         <ul className="trust__creds">
           {CREDENTIALS.map((c, i) => (
             <Reveal as="li" key={c.big} delay={0.08 * i}>

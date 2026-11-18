@@ -17,7 +17,7 @@ export const CLINIC = {
 // Public brand shown in the logo, page title and copyright. Joint Care Clinics (CLINIC above)
 // stays the business named on contact details, since it handles enquiries and appointments.
 export const BRAND = {
-  name: 'Knee Care Clinics',
+  name: 'KneePainClinic',
 };
 
 // Booking form delivery: public/api/booking.php emails each booking from a mailbox on the hosting

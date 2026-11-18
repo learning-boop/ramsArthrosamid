@@ -8,14 +8,13 @@ export const NAV = [
   { href: '#clinics', label: 'Clinics' },
 ];
 
-// "Why people choose Arthrosamid®": benefit-led reasons that answer common doubts.
-// Every claim matches wording used elsewhere on the site (FAQ, How it works); no guarantees.
+// "Why people choose Arthrosamid®": wording from the SEO plan (section 3), with no outcome promises.
 export const WHY_CHOOSE = [
-  { title: 'Tried everything else?', body: 'Built for when painkillers, physio or steroid injections haven’t given lasting relief.' },
-  { title: 'Not ready for a knee replacement?', body: 'A non-surgical option that may help you put an operation off.' },
-  { title: 'Feel the difference in weeks.', body: 'Most people notice improvement within days to weeks, building as the gel settles in.' },
-  { title: 'Get back to what you’ve given up.', body: 'Long walks, stairs, gardening and time with the grandchildren.' },
-  { title: 'No pressure to decide today.', body: 'Start with a consultation and scan, and get an honest answer on whether it’s right for you.' },
+  { title: 'Understand your options.', body: 'Find out how Arthrosamid® differs from other approaches to knee osteoarthritis.' },
+  { title: 'Your knee, your decision.', body: 'A consultation helps clarify suitability, expected benefits and possible risks.' },
+  { title: 'One knee or both?', body: 'Discuss which knee needs assessment and whether treatment is appropriate.' },
+  { title: 'Know the full cost.', body: 'Ask what the consultation and any proposed treatment include.' },
+  { title: 'No pressure to decide.', body: 'Get the information you need before committing to an injection.' },
 ];
 
 export const STAGES = [
@@ -133,16 +132,54 @@ export const REVIEWS = [
   { quote: 'I have been using Ram for many years now, for my performance, injuries and general training recovery. I have always had huge success after seeing Ram. He is truly world-class at what he does.', name: 'Richard Kilty', context: 'Captain, British athletics team' },
 ];
 
-export const FAQS = [
-  { q: 'Does the injection hurt?', a: 'Most people feel pressure rather than pain. The skin is numbed first, and ultrasound guidance keeps the injection brief. If you’re needle-phobic, just tell us when you book.' },
-  { q: 'How long does the appointment take?', a: 'Allow around 2 to 3 hours. That includes the consultation and scan, a 60–90 minute wait after your antibiotics, the injection and a short rest. The injection itself takes a few seconds.' },
-  { q: 'When will I notice a difference?', a: 'It isn’t an instant painkiller. Most people notice improvement over days to weeks, building as the gel settles in. A mild flare in the first week is common.' },
-  { q: 'What should I expect afterwards?', a: 'Some swelling, tightness or heaviness in the first week is normal while the knee settles. Improvement usually builds over two to six weeks, and we review how you’re moving at three to twelve months.' },
-  { q: 'Is Arthrosamid® a hydrogel injection?', a: 'Yes. Arthrosamid® is a polyacrylamide hydrogel, a soft gel that is 97.5% water. You may also see it called a hydrogel knee injection or a knee gel injection. Unlike other gel injections, it isn’t broken down by the body.' },
-  { q: 'How long does it last?', a: 'Arthrosamid® isn’t absorbed like steroid or hyaluronic acid injections. Clinical follow-up reports sustained pain relief up to five years after a single injection, though every knee responds differently.' },
-  { q: 'What are the side effects?', a: 'Usually temporary pain, swelling or a feeling of tightness that settles within days to a few weeks. Infection is rare, which is why you have antibiotics on the day.' },
-  { q: 'Can I have both knees treated?', a: 'Yes. Each knee is treated separately, and we’ll advise whether to do both on the same day or stage them.' },
-  { q: 'Can I drive home afterwards?', a: 'Most patients are able to drive again after a few hours, once the local anaesthetic has worn off. Some motor insurers have their own rules after a local anaesthetic, so it’s worth checking your policy.' },
+// Patient FAQs from the SEO plan (section 4). Clinical answers must be reviewed before publishing.
+export const FAQ_GROUPS = [
+  {
+    title: 'Understanding the treatment',
+    items: [
+      { q: 'What is an Arthrosamid® knee injection?', a: 'Arthrosamid® is a hydrogel injection intended to help manage symptoms of knee osteoarthritis in adults. It is placed into the knee joint by a trained clinician. It does not replace worn cartilage or cure osteoarthritis. A consultation is needed to decide whether it is appropriate for you.' },
+      { q: 'Is Arthrosamid® the same as a steroid knee injection?', a: 'No. Arthrosamid® is a non-absorbable hydrogel, whereas a steroid injection is used to reduce inflammation. They are different treatments with different benefits, limitations and risks. Your clinician can explain which options should be considered alongside exercise and other osteoarthritis care.' },
+      { q: 'How is Arthrosamid® different from a hyaluronic acid injection?', a: 'They are not the same product. Arthrosamid® is designed to remain within the joint tissue, while hyaluronic acid is an absorbable injection. That difference alone does not prove one gives better pain relief. UK NICE guidance does not recommend routine hyaluronan injections for osteoarthritis. Ask about the evidence for each option.' },
+      { q: 'Will Arthrosamid® repair my knee cartilage?', a: 'Arthrosamid® is intended to manage symptoms; it has not been shown to regrow lost cartilage or reverse arthritis. The aim of any treatment should be discussed in terms of your symptoms and daily activities, with a realistic understanding of benefits and limits.' },
+      { q: 'Can Arthrosamid® help if my knee is bone on bone?', a: 'A scan or X-ray description alone cannot tell you whether an injection will help. The clinician needs to review your symptoms, movement, previous treatment and overall health. For advanced osteoarthritis, a discussion about surgery or other care may also be appropriate.' },
+      { q: 'Could Arthrosamid® stop me needing a knee replacement?', a: 'Nobody can promise that an injection will prevent or delay knee replacement. If your knee symptoms are seriously affecting everyday life despite appropriate treatment, NICE recommends considering referral for a joint replacement assessment. Discuss your goals and options before deciding.' },
+    ],
+  },
+  {
+    title: 'Suitability and safety',
+    items: [
+      { q: 'Can I have Arthrosamid® injected into both knees?', a: 'Both knees can be discussed at a consultation, but each knee needs its own assessment. Your clinician will advise whether treatment is suitable and whether it should be planned together or separately. Do not assume both knees will be treated in one appointment.' },
+      { q: 'Can I have the injection in just one knee?', a: 'Yes, an enquiry can be for one knee. The clinician will assess the knee that is troubling you and explain whether Arthrosamid® is appropriate. If you have symptoms in the other knee, mention those too so that your care is considered properly.' },
+      { q: 'I had another knee injection recently. Can I still have Arthrosamid®?', a: 'Tell the clinician what was injected and when. Some earlier injections must have been absorbed before Arthrosamid® is considered, and certain non-absorbable implants mean it should not be used. Do not book an injection without sharing your previous treatment history.' },
+      { q: 'Who should not have an Arthrosamid® injection?', a: 'The manufacturer lists circumstances where it should not be used, including infection in or around the knee, certain previous implants, knee replacement, recent knee arthroscopy and some bleeding or blood-thinning conditions. A clinician must check your full history and the current product safety information before treatment.' },
+      { q: 'Is Arthrosamid® suitable if I have diabetes or take immune-suppressing medicine?', a: 'These conditions need individual medical review. The manufacturer advises caution with uncontrolled diabetes, a weakened immune system and some other health conditions. Tell the clinician about your medicines, infections and planned procedures before any decision is made.' },
+      { q: 'Can I have Arthrosamid® after a knee replacement?', a: 'The manufacturer lists a previous knee replacement or foreign material in that knee among reasons not to inject Arthrosamid®. Tell the clinic about all previous knee surgery and implants so you can be directed to appropriate advice.' },
+    ],
+  },
+  {
+    title: 'Appointment and recovery',
+    items: [
+      { q: 'What happens during an Arthrosamid® consultation?', a: 'The consultation includes discussing your symptoms and goals, examining the knee and, where appropriate, an ultrasound scan. The clinician should explain available options, possible risks, costs and whether an injection makes sense for your situation. You should have time to ask questions before deciding.' },
+      { q: 'Will I need an ultrasound scan before the injection?', a: 'An ultrasound scan is part of our consultation process, and ultrasound guidance may also be used during the procedure. However, not everyone with knee osteoarthritis needs routine imaging for diagnosis. The clinician will explain when a scan is useful in your assessment.' },
+      { q: 'Does an Arthrosamid® injection hurt?', a: 'You may feel discomfort during or after the injection. A local anaesthetic is used, and the clinician should explain the steps and pain-control options in advance. If you are worried about needles, say so when you enquire.' },
+      { q: 'Why might antibiotics be given before an Arthrosamid® injection?', a: 'Antibiotics are part of our treatment pathway to reduce infection risk. Tell the clinician about any allergies or previous reactions to antibiotics. They should confirm the exact medicine and timing for you at the appointment.' },
+      { q: 'Can I drive home after Arthrosamid® treatment?', a: 'Do not assume you will be fit to drive immediately. Advice depends on your knee, how you feel, any medicines used and the clinician’s aftercare instructions. Ask the clinic before your appointment so you can arrange transport if needed.' },
+      { q: 'How long does recovery take after an Arthrosamid® injection?', a: 'Recovery and symptom changes vary. Some people experience discomfort or swelling after an injection, and activity advice should be tailored to the individual. Follow the aftercare plan provided by your clinician rather than a fixed online timetable.' },
+      { q: 'Which symptoms after a knee injection need urgent advice?', a: 'Contact your treating team promptly if the knee becomes very painful, red, hot or markedly swollen, or if you have signs of infection. The manufacturer warns that infection requires immediate treatment. Use urgent medical services if you are seriously unwell or cannot reach the team.' },
+    ],
+  },
+  {
+    title: 'Results, cost and booking',
+    items: [
+      { q: 'When should I expect to notice a difference?', a: 'People respond differently, and there is no reliable timetable for every patient. Ask the clinician what the published studies show, what the uncertainty is and how any progress would be reviewed. Avoid treating another patient’s experience as a promise about your own knee.' },
+      { q: 'How long can Arthrosamid® pain relief last?', a: 'Arthrosamid® is designed to remain in joint tissue, but that is not the same as a guarantee of lasting symptom relief. Published studies report outcomes over different follow-up periods. The clinician should explain the evidence and its limitations in relation to your condition.' },
+      { q: 'What happens if Arthrosamid® does not help me?', a: 'Arrange a clinical review rather than assuming you need another injection. Your clinician can reassess the diagnosis and discuss exercise, pain management, other treatments or a specialist referral if appropriate. An injection is one possible part of knee osteoarthritis care.' },
+      { q: 'How much does a private Arthrosamid® injection cost?', a: 'The full treatment pathway is £2,300 per knee, and a consultation and ultrasound assessment on its own is £150. Confirm the latest fee and exactly what is included before booking. Prices may differ between providers.' },
+      { q: 'Is Arthrosamid® available through the NHS?', a: 'We can’t say whether it is available to you through the NHS. Ask your NHS clinician or local service what treatments and pathways are available to you. This website describes a private consultation and treatment route.' },
+      { q: 'How do I arrange an appointment with Ram Rachaputi?', a: 'Use the consultation request form to choose a preferred location and leave your contact details. The booking team will explain appointment availability and who will contact you. Suitability for the injection is decided by a clinician after assessment, not by completing the online form.' },
+      { q: 'Where can I see Ram Rachaputi for an Arthrosamid® consultation?', a: 'Ram currently sees patients in Birmingham, Leicester, Rugby, Milton Keynes and Newcastle. Appointments take place at host clinics run by separate businesses, so confirm availability and the venue before travelling.' },
+    ],
+  },
 ];
 
 // Joint Care Clinics locations where Ram sees patients (from jointcareclinics.co.uk/contact).

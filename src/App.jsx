@@ -9,7 +9,6 @@ import Steps from './components/Steps.jsx';
 import Price from './components/Price.jsx';
 import Clinician from './components/Clinician.jsx';
 import OtherInjections from './components/OtherInjections.jsx';
-import Testimonials from './components/Testimonials.jsx';
 import BeforeAfter from './components/BeforeAfter.jsx';
 import Faq from './components/Faq.jsx';
 import Clinics from './components/Clinics.jsx';
@@ -31,7 +30,6 @@ export default function App() {
         <Price />
         <Clinician />
         <OtherInjections />
-        <Testimonials />
         <BeforeAfter />
         <Faq />
         <Clinics />

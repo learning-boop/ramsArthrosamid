@@ -123,10 +123,10 @@ $knee      = is_string($input['knee'] ?? null) ? $input['knee'] : '';
 $name      = line($input['name'] ?? '', 120);
 $phone     = line($input['phone'] ?? '', 40);
 $email     = line($input['email'] ?? '', 200);
-$message   = is_string($input['message'] ?? null) ? trim(mb_substr($input['message'], 0, 3000, 'UTF-8')) : '';
+$message   = is_string($input['message'] ?? null) ? trim(mb_substr($input['message'], 0, 500, 'UTF-8')) : '';
 
 if (
-    !isset(CLINICS[$clinicKey]) || !isset(OPTIONS[$optionKey]) || !in_array($knee, KNEES, true)
+    !isset(CLINICS[$clinicKey]) || !isset(OPTIONS[$optionKey]) || ($knee !== '' && !in_array($knee, KNEES, true))
     || $name === '' || strlen(preg_replace('/\D/', '', $phone)) < 10
     || ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL))
     || ($input['consent'] ?? false) !== true
@@ -155,7 +155,7 @@ $body = implode("\n", [
     'Clinic:         ' . $clinic['name'],
     'Address:        ' . $clinic['address'],
     'Interested in:  ' . OPTIONS[$optionKey],
-    'Knee:           ' . $knee,
+    'Knee:           ' . ($knee !== '' ? $knee : 'Not asked on the form'),
     '',
     'Name:           ' . $name,
     'Phone:          ' . $phone,
