@@ -17,7 +17,7 @@ const KNEES = ['Right', 'Left', 'Both', 'Not sure'];
 
 /** Read ?clinic= and ?option= so buttons elsewhere can open the form preselected. */
 function initialForm() {
-  const q = new URLSearchParams(window.location.search);
+  const q = new URLSearchParams(typeof window === 'undefined' ? '' : window.location.search);
   const clinic = CLINICS.some((c) => c.slug === q.get('clinic')) ? q.get('clinic') : '';
   const option = OPTIONS.some((o) => o.value === q.get('option')) ? q.get('option') : 'treatment';
   return { name: '', phone: '', email: '', clinic, option, knee: 'Right', message: '', consent: false, website: '' };

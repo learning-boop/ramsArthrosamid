@@ -15,7 +15,7 @@ export default function Intro() {
     return () => clearTimeout(t);
   }, []);
 
-  if (reduce || gone) return null;
+  if (reduce || gone || typeof window === 'undefined') return null;
 
   return (
     <motion.div

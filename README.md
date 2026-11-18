@@ -14,6 +14,14 @@ npm run preview    # serve the production build locally
 Deploy the contents of `dist/` to any static host (cPanel public_html, Netlify, Vercel, Cloudflare Pages).
 `vite.config.js` sets `base: './'`, so the build also works from a sub-folder such as `/arthrosamid/`.
 
+## Search engines (SEO)
+
+- `npm run build` pre-renders the home and booking pages (`src/entry-server.jsx`, `scripts/prerender.mjs`),
+  so their full text is in the HTML crawlers receive; the browser then takes over with the live React app.
+- Preferred address is `https://kneepainclinic.uk` (no www). `public/.htaccess` redirects http, www and
+  `/index.html` to it, and serves `/book`. Canonical tags are in `index.html` and `book.html`.
+- `public/sitemap.xml` and `public/robots.txt` list the public pages. Add any new page to the sitemap.
+
 ## Where things live
 
 | File | What to edit there |

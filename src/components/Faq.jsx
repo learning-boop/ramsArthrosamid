@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import Reveal from './Reveal.jsx';
 import { Plus } from './Icons.jsx';
 import { FAQS } from '../data/content.js';
@@ -30,21 +30,18 @@ export default function Faq() {
                     <span className="faq__icon" aria-hidden="true"><Plus /></span>
                   </button>
                 </h3>
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      className="faq__a"
-                      id={`faq-${i}`}
-                      key="panel"
-                      initial={reduce ? false : { height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={reduce ? {} : { height: 0, opacity: 0 }}
-                      transition={{ duration: 0.45, ease: [0.2, 0.7, 0.2, 1] }}
-                    >
-                      <p>{f.a}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                <motion.div
+                  className="faq__a"
+                  id={`faq-${i}`}
+                  role="region"
+                  aria-hidden={!isOpen}
+                  initial={false}
+                  animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+                  transition={reduce ? { duration: 0 } : { duration: 0.45, ease: [0.2, 0.7, 0.2, 1] }}
+                  style={{ height: 0, opacity: 0 }}
+                >
+                  <p>{f.a}</p>
+                </motion.div>
               </div>
             );
           })}

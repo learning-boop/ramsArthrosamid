@@ -1,8 +1,23 @@
-# Clean booking address: /book serves book.html, and old /book.html or /book/ links redirect to /book.
 # Written without RewriteBase so it works from the main domain or a subfolder.
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # One preferred address: https and no "www". Local test servers are left alone.
+  RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:[0-9]+)?$ [NC]
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+  RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:[0-9]+)?$ [NC]
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # /index.html is the same page as /.
+  RewriteCond %{THE_REQUEST} \s[^?\s]*/index\.html[?\s]
+  RewriteCond %{REQUEST_URI} ^(.*/)index\.html$
+  RewriteRule ^index\.html$ %1 [R=301,L]
+
+  # Clean booking address: /book serves book.html; old /book.html and /book/ links redirect to /book.
   RewriteCond %{THE_REQUEST} \s[^?\s]*/book\.html[?\s]
   RewriteCond %{REQUEST_URI} ^(.*)/book\.html$
   RewriteRule ^book\.html$ %1/book [R=301,L]
@@ -11,4 +26,11 @@
   RewriteRule ^book/$ %1/book [R=301,L]
 
   RewriteRule ^book$ book.html [L]
+</IfModule>
+
+# Basic security headers that don't affect how the site works.
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
 </IfModule>
